@@ -1,0 +1,209 @@
+@import "../variables.scss";
+
+//Extends
+%border-header {
+    border-right: solid $back-color 1px;
+    border-bottom: 0;
+    border-top: 0;
+    border-left: 0;
+}
+
+*{
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 11px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    grid-template-columns: 75% 20%;
+    background-color: $primary-color;
+    color: $secundary-text-color;
+    height: 67px;
+
+    form{
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+        &>img{
+            width: 20px;
+        }
+
+        &>input{
+            background-color: transparent;
+            color: $back-color;
+            border: none;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .notifications{
+        background-color: $secundary-text-color;
+        color: $primary-color;
+        padding: 10px;
+        width: 14px;
+        text-align: center;
+        border-radius: 100%;
+        margin-right: 20px;
+        font-size: 14px;
+        border: 1px solid $notification-color;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+
+        &:first-child{
+            grid-column: 1 / 2;
+
+            &>.menu{
+                display: none;
+            }
+
+            &>.mensaje{
+                display: none;
+            }
+            
+            &>.ib-icon{
+                height: 25px;
+                margin: 0 15px;
+                padding: 2px;
+            }
+
+            button{
+                @extend %border-header;
+                height: 67px;
+                padding: 0 45px;
+                background-color: $primary-color;
+                color: $secundary-text-color;
+                text-transform: uppercase;
+
+                &:nth-child(2){
+                    border-left: solid $back-color 1px;
+                }
+            }
+        }
+        &:nth-child(2){
+            grid-column: 2 / 3;
+            height: 100%;
+            
+            .sidebar{
+                width: 325px;
+                &>span{
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    border-left: solid $back-color 1px;
+                    &>img{
+                        width: 40px;
+                        margin-left: 20px;
+                        padding: 1px;
+                        border-radius: 5px;
+                        background-color: $secundary-text-color;
+                        border: 1px solid $notification-color;
+                    }
+                }
+                p{
+                   margin-left: 10px; 
+                   min-width: 65px;
+                }
+                &>img{
+                    width: 15px;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    background-color: $footer-color;
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+    
+    &>.ib-icon{
+        //position: absolute;
+        width: 45px;
+        margin-left: 20px;
+    }
+
+    ul{
+        display: flex;
+        .links{
+            list-style: none;
+            a{
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $secundary-text-color;
+                margin-left: 20px;
+            }
+        }
+    }
+
+    
+    
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    footer{
+        ul{
+            display: block;
+            .links{
+                display: inline-block;
+                width: 25%;
+                padding: 10px 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+
+    header{
+        display: block;
+        padding: 15px 25px;
+        height: auto;
+        div {
+            &:first-child{
+                justify-content: space-between;
+                align-items: center;
+
+                &>.menu{
+                    display: block;
+                    width: 30px;
+                }
+                &>.mensaje{
+                    display: block;
+                    width: 30px;
+                }
+                button, form{
+                    display: none;
+                }
+            }
+            &:nth-child(2){
+                display: none;
+            }
+        }
+    }
+
+    footer{
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        padding: 15px 0 ;
+        img{
+            margin-right: 30px;
+            align-self: flex-end;
+        }
+        ul{
+            margin-left: 20px;
+            padding: 0;
+            display: block;
+            .links{
+                padding: 10px 0;
+            }
+        }
+    }
+    
+}

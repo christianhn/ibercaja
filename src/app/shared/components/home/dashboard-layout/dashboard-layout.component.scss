@@ -1,0 +1,19 @@
+@import "../../../../../variables.scss";
+
+.dashboard-containter{
+    display: flex;
+}
+section{
+    display: block;
+}
+.main-section{
+    width: calc(100% - 325px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar-section{
+    width: 284px;
+    padding: 20px;
+    border-left: solid 1px $grey-color;
+}

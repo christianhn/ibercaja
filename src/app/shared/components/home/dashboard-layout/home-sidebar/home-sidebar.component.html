@@ -1,0 +1,24 @@
+<section class="recent-activity">
+    <h3>Actividad reciente</h3>
+    <div class="scroll">
+        <div *ngFor="let movement of movements" class="movement">
+            <div class="date">{{ movement.date }}</div>
+            <div class="payments" *ngFor="let payment of movement.payments">
+                <span>{{ payment.concept }}</span>
+                <div class="amount">
+                    <span>{{ payment.amount }} €</span>
+                    <img src="../../../../assets/green-point.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="needs">
+    <h3>Necesidades</h3>
+    <div class="buy-section">
+        <img src="../../../../assets/ordenador.png" alt="">
+        <span>Comprar ordenadores</span>
+    </div>
+</section>
+<button class="message"> <img src="../../../../../../assets/message.png" alt=""> </button>
+
