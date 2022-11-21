@@ -2,8 +2,9 @@
     ul{
         display: flex;
         justify-content: space-between;
+        list-style: none;
         li{
-            //display: inline-block;
+            margin-left: 15px;
         }
     }
 }

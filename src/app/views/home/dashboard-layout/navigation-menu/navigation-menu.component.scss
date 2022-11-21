@@ -1,0 +1,36 @@
+@import "src/scss/variables.scss";
+
+nav{
+    margin-left: -10px;
+    border-top: solid 1px $grey-color;
+    border-bottom: solid 4px $grey-color;
+    height: 52.5px;
+    ul{
+        display: flex;
+        margin: 0;
+        position: absolute;
+        li{
+            display: inline-block;
+            padding: 10px 0;
+            padding-bottom: 20px;
+            margin: 10px;
+            margin-bottom: 0;
+            border-radius: 3px;
+            &.select-level{
+                border-bottom: solid 4px $primary-color;
+            }
+            a{
+                padding: 0 10px;
+                text-decoration: none;
+                color: $primary-text-color;
+                cursor: pointer;
+            }
+
+            &:last-child{
+                &>a{
+                    border-left: solid 1px;
+                }
+            }
+        }
+    }
+}

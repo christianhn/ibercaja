@@ -1,1 +1,6 @@
-<p>dashboard-summary works!</p>
+<section>
+    <div class="info-type" *ngFor="let type of summary">
+        <span class="name">{{ type.name | uppercase }}</span>
+        <span class="amount">{{ type.amount | currency:'EUR' }}</span>
+    </div>
+</section>

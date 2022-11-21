@@ -9,7 +9,27 @@ h3{
     .scroll{
         height: 350px;
         overflow: scroll;
-        
+        overflow-x: hidden;
+        padding-right: 10px;
+        margin-right: -10px;
+        &::-webkit-scrollbar {
+            width: 7px;
+        } 
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }            
+        &::-webkit-scrollbar-thumb {
+            background-color: transparent;
+            border-radius: 20px;
+        }
+
+        &.is-scrolling{        
+            &::-webkit-scrollbar-thumb {
+                background-color: $grey-color;
+                border-radius: 20px;
+            }
+        }
+
         .movement{
             margin-top: 25px;
     

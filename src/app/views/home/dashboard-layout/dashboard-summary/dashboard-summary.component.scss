@@ -1,0 +1,32 @@
+@import "src/scss/variables.scss";
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+
+    .info-type{
+        margin-right: 20px;
+        border-right: solid 1px $grey-color;
+        padding-right: 20px;
+
+        &:nth-child(1){
+            .amount{
+                color: $primary-color;
+            }  
+            height: 37px;
+        }
+        &:last-child{
+            border-right: 0;
+        }
+
+        .name{
+            //text-transform: uppercase;
+            display: block;
+        }
+        .amount{
+            display: block;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    }
+}

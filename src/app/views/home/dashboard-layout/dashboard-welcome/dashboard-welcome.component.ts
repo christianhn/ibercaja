@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard-welcome.component.scss']
 })
 export class DashboardWelcomeComponent {
-
+  date: Date = new Date();
+  
 }

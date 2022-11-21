@@ -7,4 +7,37 @@ import { Component } from '@angular/core';
 })
 export class NavigationMenuComponent {
 
+  navLevels = [
+    {
+      id: "accounts",
+      name: "Cuentas tarjetas y TPVS",
+      isShown: false
+    },
+    {
+      id: "financing",
+      name: "Financiación",
+      isShown: false
+    }, 
+    {
+      id: "commerce",
+      name: "Comercio exterior",
+      isShown: false
+    },
+    {
+      id: "payments",
+      name: "Cobros y pagos",
+      icon: "icon",
+      isShown: false
+    }
+  ];
+  
+  selectLevel(level: any){
+    
+    this.navLevels.forEach(element => {
+      element.isShown = false;
+    });
+    
+    level.isShown = true;
+  }
+
 }

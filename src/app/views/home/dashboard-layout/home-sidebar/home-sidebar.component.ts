@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-home-sidebar',
@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-sidebar.component.scss']
 })
 export class HomeSidebarComponent {
-
-  movements = [
+  isShowScroll: boolean = false;
+  movements  = [
     {
       date: "22 SEP",
       payments: [
@@ -52,4 +52,14 @@ export class HomeSidebarComponent {
     }
   ];
 
+  @HostListener("scroll", ['$event'])
+  doSomethingOnScroll(){
+    if (!this.isShowScroll) {
+      this.isShowScroll = true;
+      setTimeout(() => {
+        this.isShowScroll = false;
+      }, 1000)
+    }
+  }
+  
 }
