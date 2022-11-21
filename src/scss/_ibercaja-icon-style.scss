@@ -1,0 +1,1430 @@
+@import "./variables.scss";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?41g8nl');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?41g8nl#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?41g8nl') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?41g8nl') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?41g8nl##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-acceso {
+  &:before {
+    content: $icon-acceso; 
+  }
+}
+.icon-Adeudos {
+  &:before {
+    content: $icon-Adeudos; 
+  }
+}
+.icon-adeudos-sepa {
+  &:before {
+    content: $icon-adeudos-sepa; 
+  }
+}
+.icon-Admin-Usuarios {
+  &:before {
+    content: $icon-Admin-Usuarios; 
+  }
+}
+.icon-agenda-de-cuentas {
+  &:before {
+    content: $icon-agenda-de-cuentas; 
+  }
+}
+.icon-agenda-movil {
+  &:before {
+    content: $icon-agenda-movil; 
+  }
+}
+.icon-Ajuste-tarjetas {
+  &:before {
+    content: $icon-Ajuste-tarjetas; 
+  }
+}
+.icon-Alert {
+  &:before {
+    content: $icon-Alert; 
+  }
+}
+.icon-alerta-ficheros {
+  &:before {
+    content: $icon-alerta-ficheros; 
+  }
+}
+.icon-alerta-recibos {
+  &:before {
+    content: $icon-alerta-recibos; 
+  }
+}
+.icon-alta {
+  &:before {
+    content: $icon-alta; 
+  }
+}
+.icon-alta-transferencia-periodica {
+  &:before {
+    content: $icon-alta-transferencia-periodica; 
+  }
+}
+.icon-amorizacion-parcial {
+  &:before {
+    content: $icon-amorizacion-parcial; 
+  }
+}
+.icon-anticipio-cobro-facturas {
+  &:before {
+    content: $icon-anticipio-cobro-facturas; 
+  }
+}
+.icon-anticipos-N58 {
+  &:before {
+    content: $icon-anticipos-N58; 
+  }
+}
+.icon-anular-recompra {
+  &:before {
+    content: $icon-anular-recompra; 
+  }
+}
+.icon-apertura {
+  &:before {
+    content: $icon-apertura; 
+  }
+}
+.icon-apertur-modelo {
+  &:before {
+    content: $icon-apertur-modelo; 
+  }
+}
+.icon-aportacion-extraordinaria {
+  &:before {
+    content: $icon-aportacion-extraordinaria; 
+  }
+}
+.icon-Archivo {
+  &:before {
+    content: $icon-Archivo; 
+  }
+}
+.icon-asuntos-pendientes {
+  &:before {
+    content: $icon-asuntos-pendientes; 
+  }
+}
+.icon-avales-solicitados {
+  &:before {
+    content: $icon-avales-solicitados; 
+  }
+}
+.icon-Ayuda {
+  &:before {
+    content: $icon-Ayuda; 
+  }
+}
+.icon-Busqueda {
+  &:before {
+    content: $icon-Busqueda; 
+  }
+}
+.icon-Buzon {
+  &:before {
+    content: $icon-Buzon; 
+  }
+}
+.icon-calculo-SEPA {
+  &:before {
+    content: $icon-calculo-SEPA; 
+  }
+}
+.icon-Calendario {
+  &:before {
+    content: $icon-Calendario; 
+  }
+}
+.icon-cambiar-clave-de-acceso {
+  &:before {
+    content: $icon-cambiar-clave-de-acceso; 
+  }
+}
+.icon-cambiar-clave-de-firma {
+  &:before {
+    content: $icon-cambiar-clave-de-firma; 
+  }
+}
+.icon-Cambiar-contrato {
+  &:before {
+    content: $icon-Cambiar-contrato; 
+  }
+}
+.icon-cancelar-domiciliacion {
+  &:before {
+    content: $icon-cancelar-domiciliacion; 
+  }
+}
+.icon-caracteristicas {
+  &:before {
+    content: $icon-caracteristicas; 
+  }
+}
+.icon-carga-movil {
+  &:before {
+    content: $icon-carga-movil; 
+  }
+}
+.icon-carga-prepago {
+  &:before {
+    content: $icon-carga-prepago; 
+  }
+}
+.icon-Carrito {
+  &:before {
+    content: $icon-Carrito; 
+  }
+}
+.icon-Cashpool {
+  &:before {
+    content: $icon-Cashpool; 
+  }
+}
+.icon-Cerrar {
+  &:before {
+    content: $icon-Cerrar; 
+  }
+}
+.icon-Cerrar-sesion {
+  &:before {
+    content: $icon-Cerrar-sesion; 
+  }
+}
+.icon-Certificados {
+  &:before {
+    content: $icon-Certificados; 
+  }
+}
+.icon-Cheque {
+  &:before {
+    content: $icon-Cheque; 
+  }
+}
+.icon-Chevron-abajo {
+  &:before {
+    content: $icon-Chevron-abajo; 
+  }
+}
+.icon-Chevron-arriba {
+  &:before {
+    content: $icon-Chevron-arriba; 
+  }
+}
+.icon-Chevron-derecha {
+  &:before {
+    content: $icon-Chevron-derecha; 
+  }
+}
+.icon-Chrevron-izquierda {
+  &:before {
+    content: $icon-Chrevron-izquierda; 
+  }
+}
+.icon-Claves {
+  &:before {
+    content: $icon-Claves; 
+  }
+}
+.icon-Cobros-y-pagos {
+  &:before {
+    content: $icon-Cobros-y-pagos; 
+  }
+}
+.icon-Comercio {
+  &:before {
+    content: $icon-Comercio; 
+  }
+}
+.icon-comercio-exterior {
+  &:before {
+    content: $icon-comercio-exterior; 
+  }
+}
+.icon-compra_fondos_carrito {
+  &:before {
+    content: $icon-compra_fondos_carrito; 
+  }
+}
+.icon-compra-continuo {
+  &:before {
+    content: $icon-compra-continuo; 
+  }
+}
+.icon-compra-extranjeros {
+  &:before {
+    content: $icon-compra-extranjeros; 
+  }
+}
+.icon-condiciones {
+  &:before {
+    content: $icon-condiciones; 
+  }
+}
+.icon-confirming-Ibercaja {
+  &:before {
+    content: $icon-confirming-Ibercaja; 
+  }
+}
+.icon-consulta-domiciliaciones {
+  &:before {
+    content: $icon-consulta-domiciliaciones; 
+  }
+}
+.icon-consulta-facturas {
+  &:before {
+    content: $icon-consulta-facturas; 
+  }
+}
+.icon-consulta-operaciones {
+  &:before {
+    content: $icon-consulta-operaciones; 
+  }
+}
+.icon-Contacto {
+  &:before {
+    content: $icon-Contacto; 
+  }
+}
+.icon-control-cheques-N67 {
+  &:before {
+    content: $icon-control-cheques-N67; 
+  }
+}
+.icon-Copiar {
+  &:before {
+    content: $icon-Copiar; 
+  }
+}
+.icon-crear-aportacion-periodica {
+  &:before {
+    content: $icon-crear-aportacion-periodica; 
+  }
+}
+.icon-cuadro-amortizacion {
+  &:before {
+    content: $icon-cuadro-amortizacion; 
+  }
+}
+.icon-cuenta-a-tarjeta {
+  &:before {
+    content: $icon-cuenta-a-tarjeta; 
+  }
+}
+.icon-Cuentas-y-tarjetas {
+  &:before {
+    content: $icon-Cuentas-y-tarjetas; 
+  }
+}
+.icon-Datos-Personales {
+  &:before {
+    content: $icon-Datos-Personales; 
+  }
+}
+.icon-Descarga {
+  &:before {
+    content: $icon-Descarga; 
+  }
+}
+.icon-descarga-prepago {
+  &:before {
+    content: $icon-descarga-prepago; 
+  }
+}
+.icon-descripcion-cuadernos-AEB {
+  &:before {
+    content: $icon-descripcion-cuadernos-AEB; 
+  }
+}
+.icon-Destacado {
+  &:before {
+    content: $icon-Destacado; 
+  }
+}
+.icon-Destacado-filled {
+  &:before {
+    content: $icon-Destacado-filled; 
+  }
+}
+.icon-deudores {
+  &:before {
+    content: $icon-deudores; 
+  }
+}
+.icon-devolver-recibo {
+  &:before {
+    content: $icon-devolver-recibo; 
+  }
+}
+.icon-devolver-recibo-2 {
+  &:before {
+    content: $icon-devolver-recibo-2; 
+  }
+}
+.icon-documentos-emitidos-N66 {
+  &:before {
+    content: $icon-documentos-emitidos-N66; 
+  }
+}
+.icon-Dolar {
+  &:before {
+    content: $icon-Dolar; 
+  }
+}
+.icon-Domiciliaciones {
+  &:before {
+    content: $icon-Domiciliaciones; 
+  }
+}
+.icon-Dotted {
+  &:before {
+    content: $icon-Dotted; 
+  }
+}
+.icon-Drag-drop {
+  &:before {
+    content: $icon-Drag-drop; 
+  }
+}
+.icon-Editar {
+  &:before {
+    content: $icon-Editar; 
+  }
+}
+.icon-efectos-pendientes-cargo {
+  &:before {
+    content: $icon-efectos-pendientes-cargo; 
+  }
+}
+.icon-efectos-pendientes-cargo-2 {
+  &:before {
+    content: $icon-efectos-pendientes-cargo-2; 
+  }
+}
+.icon-Eliminado {
+  &:before {
+    content: $icon-Eliminado; 
+  }
+}
+.icon-Eliminar {
+  &:before {
+    content: $icon-Eliminar; 
+  }
+}
+.icon-Enviar {
+  &:before {
+    content: $icon-Enviar; 
+  }
+}
+.icon-enviar-ficheros-externos {
+  &:before {
+    content: $icon-enviar-ficheros-externos; 
+  }
+}
+.icon-Error {
+  &:before {
+    content: $icon-Error; 
+  }
+}
+.icon-Euro {
+  &:before {
+    content: $icon-Euro; 
+  }
+}
+.icon-Factura-electronica {
+  &:before {
+    content: $icon-Factura-electronica; 
+  }
+}
+.icon-facturas {
+  &:before {
+    content: $icon-facturas; 
+  }
+}
+.icon-facturas-anticipadas {
+  &:before {
+    content: $icon-facturas-anticipadas; 
+  }
+}
+.icon-Faqs {
+  &:before {
+    content: $icon-Faqs; 
+  }
+}
+.icon-Favoritas {
+  &:before {
+    content: $icon-Favoritas; 
+  }
+}
+.icon-Ficheros-N43 {
+  &:before {
+    content: $icon-Ficheros-N43; 
+  }
+}
+.icon-Ficheros-y-remesas {
+  &:before {
+    content: $icon-Ficheros-y-remesas; 
+  }
+}
+.icon-Filtros {
+  &:before {
+    content: $icon-Filtros; 
+  }
+}
+.icon-Financiacion {
+  &:before {
+    content: $icon-Financiacion; 
+  }
+}
+.icon-Firma {
+  &:before {
+    content: $icon-Firma; 
+  }
+}
+.icon-Firma-2 {
+  &:before {
+    content: $icon-Firma-2; 
+  }
+}
+.icon-Flecha-form-abajo {
+  &:before {
+    content: $icon-Flecha-form-abajo; 
+  }
+}
+.icon-Flecha-form-derecha {
+  &:before {
+    content: $icon-Flecha-form-derecha; 
+  }
+}
+.icon-Flecha-horizontal {
+  &:before {
+    content: $icon-Flecha-horizontal; 
+  }
+}
+.icon-Flecha-vertical {
+  &:before {
+    content: $icon-Flecha-vertical; 
+  }
+}
+.icon-fondos {
+  &:before {
+    content: $icon-fondos; 
+  }
+}
+.icon-Fondos_Buscador {
+  &:before {
+    content: $icon-Fondos_Buscador; 
+  }
+}
+.icon-Fondos_Comparador {
+  &:before {
+    content: $icon-Fondos_Comparador; 
+  }
+}
+.icon-Grid {
+  &:before {
+    content: $icon-Grid; 
+  }
+}
+.icon-Hamburguesa {
+  &:before {
+    content: $icon-Hamburguesa; 
+  }
+}
+.icon-Hamburguesa-2 {
+  &:before {
+    content: $icon-Hamburguesa-2; 
+  }
+}
+.icon-historico-mandatos {
+  &:before {
+    content: $icon-historico-mandatos; 
+  }
+}
+.icon-historico-recibos {
+  &:before {
+    content: $icon-historico-recibos; 
+  }
+}
+.icon-ico_inversion {
+  &:before {
+    content: $icon-ico_inversion; 
+  }
+}
+.icon-ico_novedades {
+  &:before {
+    content: $icon-ico_novedades; 
+  }
+}
+.icon-ico-agregar-cuenta {
+  &:before {
+    content: $icon-ico-agregar-cuenta; 
+  }
+}
+.icon-Imprimir {
+  &:before {
+    content: $icon-Imprimir; 
+  }
+}
+.icon-Impuestos {
+  &:before {
+    content: $icon-Impuestos; 
+  }
+}
+.icon-Info {
+  &:before {
+    content: $icon-Info; 
+  }
+}
+.icon-info-reglamentaria {
+  &:before {
+    content: $icon-info-reglamentaria; 
+  }
+}
+.icon-informacion_fondo {
+  &:before {
+    content: $icon-informacion_fondo; 
+  }
+}
+.icon-informacion-cuenta {
+  &:before {
+    content: $icon-informacion-cuenta; 
+  }
+}
+.icon-Informacion-cuenta-2 {
+  &:before {
+    content: $icon-Informacion-cuenta-2; 
+  }
+}
+.icon-informacion-periodica {
+  &:before {
+    content: $icon-informacion-periodica; 
+  }
+}
+.icon-ingreso-cheques-y-pagares {
+  &:before {
+    content: $icon-ingreso-cheques-y-pagares; 
+  }
+}
+.icon-interprete-extractos-N43 {
+  &:before {
+    content: $icon-interprete-extractos-N43; 
+  }
+}
+.icon-intervinientes {
+  &:before {
+    content: $icon-intervinientes; 
+  }
+}
+.icon-Inversion {
+  &:before {
+    content: $icon-Inversion; 
+  }
+}
+.icon-Legal {
+  &:before {
+    content: $icon-Legal; 
+  }
+}
+.icon-lineas-avales {
+  &:before {
+    content: $icon-lineas-avales; 
+  }
+}
+.icon-liquidacion {
+  &:before {
+    content: $icon-liquidacion; 
+  }
+}
+.icon-Lista {
+  &:before {
+    content: $icon-Lista; 
+  }
+}
+.icon-Mail {
+  &:before {
+    content: $icon-Mail; 
+  }
+}
+.icon-Mail-abierto {
+  &:before {
+    content: $icon-Mail-abierto; 
+  }
+}
+.icon-manual-operativo {
+  &:before {
+    content: $icon-manual-operativo; 
+  }
+}
+.icon-Mas {
+  &:before {
+    content: $icon-Mas; 
+  }
+}
+.icon-Menos {
+  &:before {
+    content: $icon-Menos; 
+  }
+}
+.icon-modificar {
+  &:before {
+    content: $icon-modificar; 
+  }
+}
+.icon-modo-pago {
+  &:before {
+    content: $icon-modo-pago; 
+  }
+}
+.icon-Morningstar {
+  &:before {
+    content: $icon-Morningstar; 
+  }
+}
+.icon-Mostrar {
+  &:before {
+    content: $icon-Mostrar; 
+  }
+}
+.icon-movimientos {
+  &:before {
+    content: $icon-movimientos; 
+  }
+}
+.icon-muro_adjuntar {
+  &:before {
+    content: $icon-muro_adjuntar; 
+  }
+}
+.icon-muro_ajustes {
+  &:before {
+    content: $icon-muro_ajustes; 
+  }
+}
+.icon-muro_anular {
+  &:before {
+    content: $icon-muro_anular; 
+  }
+}
+.icon-muro_archivar {
+  &:before {
+    content: $icon-muro_archivar; 
+  }
+}
+.icon-muro_ayuda {
+  &:before {
+    content: $icon-muro_ayuda; 
+  }
+}
+.icon-muro_bmp {
+  &:before {
+    content: $icon-muro_bmp; 
+  }
+}
+.icon-muro_bookmark {
+  &:before {
+    content: $icon-muro_bookmark; 
+  }
+}
+.icon-muro_buscar {
+  &:before {
+    content: $icon-muro_buscar; 
+  }
+}
+.icon-muro_calendario {
+  &:before {
+    content: $icon-muro_calendario; 
+  }
+}
+.icon-muro_calendariomas {
+  &:before {
+    content: $icon-muro_calendariomas; 
+  }
+}
+.icon-muro_cambio {
+  &:before {
+    content: $icon-muro_cambio; 
+  }
+}
+.icon-muro_cartera {
+  &:before {
+    content: $icon-muro_cartera; 
+  }
+}
+.icon-muro_chat {
+  &:before {
+    content: $icon-muro_chat; 
+  }
+}
+.icon-muro_cobrosypagos {
+  &:before {
+    content: $icon-muro_cobrosypagos; 
+  }
+}
+.icon-muro_conver_fill {
+  &:before {
+    content: $icon-muro_conver_fill; 
+  }
+}
+.icon-muro_conversacionmas {
+  &:before {
+    content: $icon-muro_conversacionmas; 
+  }
+}
+.icon-muro_cuadricula {
+  &:before {
+    content: $icon-muro_cuadricula; 
+  }
+}
+.icon-muro_dashboard {
+  &:before {
+    content: $icon-muro_dashboard; 
+  }
+}
+.icon-muro_descargar {
+  &:before {
+    content: $icon-muro_descargar; 
+  }
+}
+.icon-muro_doc {
+  &:before {
+    content: $icon-muro_doc; 
+  }
+}
+.icon-muro_docx {
+  &:before {
+    content: $icon-muro_docx; 
+  }
+}
+.icon-muro_editar {
+  &:before {
+    content: $icon-muro_editar; 
+  }
+}
+.icon-muro_elmininar {
+  &:before {
+    content: $icon-muro_elmininar; 
+  }
+}
+.icon-muro_enviar {
+  &:before {
+    content: $icon-muro_enviar; 
+  }
+}
+.icon-muro_excel {
+  &:before {
+    content: $icon-muro_excel; 
+  }
+}
+.icon-muro_ficherosyremesas {
+  &:before {
+    content: $icon-muro_ficherosyremesas; 
+  }
+}
+.icon-muro_filtros {
+  &:before {
+    content: $icon-muro_filtros; 
+  }
+}
+.icon-muro_firmar {
+  &:before {
+    content: $icon-muro_firmar; 
+  }
+}
+.icon-muro_gif {
+  &:before {
+    content: $icon-muro_gif; 
+  }
+}
+.icon-muro_home {
+  &:before {
+    content: $icon-muro_home; 
+  }
+}
+.icon-muro_hora {
+  &:before {
+    content: $icon-muro_hora; 
+  }
+}
+.icon-muro_impuestos {
+  &:before {
+    content: $icon-muro_impuestos; 
+  }
+}
+.icon-muro_info {
+  &:before {
+    content: $icon-muro_info; 
+  }
+}
+.icon-muro_jpeg {
+  &:before {
+    content: $icon-muro_jpeg; 
+  }
+}
+.icon-muro_jpg {
+  &:before {
+    content: $icon-muro_jpg; 
+  }
+}
+.icon-muro_listado {
+  &:before {
+    content: $icon-muro_listado; 
+  }
+}
+.icon-muro_mensaje {
+  &:before {
+    content: $icon-muro_mensaje; 
+  }
+}
+.icon-muro_mostrar {
+  &:before {
+    content: $icon-muro_mostrar; 
+  }
+}
+.icon-muro_oficinas {
+  &:before {
+    content: $icon-muro_oficinas; 
+  }
+}
+.icon-muro_pdf {
+  &:before {
+    content: $icon-muro_pdf; 
+  }
+}
+.icon-muro_png {
+  &:before {
+    content: $icon-muro_png; 
+  }
+}
+.icon-muro_ppt {
+  &:before {
+    content: $icon-muro_ppt; 
+  }
+}
+.icon-muro_pptx {
+  &:before {
+    content: $icon-muro_pptx; 
+  }
+}
+.icon-muro_repetir {
+  &:before {
+    content: $icon-muro_repetir; 
+  }
+}
+.icon-muro_salir {
+  &:before {
+    content: $icon-muro_salir; 
+  }
+}
+.icon-muro_sop {
+  &:before {
+    content: $icon-muro_sop; 
+  }
+}
+.icon-muro_subir {
+  &:before {
+    content: $icon-muro_subir; 
+  }
+}
+.icon-muro_tarea {
+  &:before {
+    content: $icon-muro_tarea; 
+  }
+}
+.icon-muro_telefono {
+  &:before {
+    content: $icon-muro_telefono; 
+  }
+}
+.icon-muro_tif {
+  &:before {
+    content: $icon-muro_tif; 
+  }
+}
+.icon-muro_tiff {
+  &:before {
+    content: $icon-muro_tiff; 
+  }
+}
+.icon-muro_traspasos {
+  &:before {
+    content: $icon-muro_traspasos; 
+  }
+}
+.icon-muro_txt {
+  &:before {
+    content: $icon-muro_txt; 
+  }
+}
+.icon-muro_ubicacion {
+  &:before {
+    content: $icon-muro_ubicacion; 
+  }
+}
+.icon-muro_volver {
+  &:before {
+    content: $icon-muro_volver; 
+  }
+}
+.icon-muro_word {
+  &:before {
+    content: $icon-muro_word; 
+  }
+}
+.icon-muro_xls {
+  &:before {
+    content: $icon-muro_xls; 
+  }
+}
+.icon-muro_xlsx {
+  &:before {
+    content: $icon-muro_xlsx; 
+  }
+}
+.icon-muro_xml {
+  &:before {
+    content: $icon-muro_xml; 
+  }
+}
+.icon-muro_zip {
+  &:before {
+    content: $icon-muro_zip; 
+  }
+}
+.icon-No-idea1 {
+  &:before {
+    content: $icon-No-idea1; 
+  }
+}
+.icon-nomina {
+  &:before {
+    content: $icon-nomina; 
+  }
+}
+.icon-nomina-N34-SEPA {
+  &:before {
+    content: $icon-nomina-N34-SEPA; 
+  }
+}
+.icon-nominas {
+  &:before {
+    content: $icon-nominas; 
+  }
+}
+.icon-Nuevo-certificado {
+  &:before {
+    content: $icon-Nuevo-certificado; 
+  }
+}
+.icon-Ocultar {
+  &:before {
+    content: $icon-Ocultar; 
+  }
+}
+.icon-Oficinas {
+  &:before {
+    content: $icon-Oficinas; 
+  }
+}
+.icon-OK {
+  &:before {
+    content: $icon-OK; 
+  }
+}
+.icon-OK-2 {
+  &:before {
+    content: $icon-OK-2; 
+  }
+}
+.icon-OPAS {
+  &:before {
+    content: $icon-OPAS; 
+  }
+}
+.icon-operaciones {
+  &:before {
+    content: $icon-operaciones; 
+  }
+}
+.icon-operaciones-pendientes {
+  &:before {
+    content: $icon-operaciones-pendientes; 
+  }
+}
+.icon-Operar {
+  &:before {
+    content: $icon-Operar; 
+  }
+}
+.icon-operativa-nuevo-certificado {
+  &:before {
+    content: $icon-operativa-nuevo-certificado; 
+  }
+}
+.icon-Operativas {
+  &:before {
+    content: $icon-Operativas; 
+  }
+}
+.icon-Orden-de-adeudo {
+  &:before {
+    content: $icon-Orden-de-adeudo; 
+  }
+}
+.icon-Orden-de-adeudo-2 {
+  &:before {
+    content: $icon-Orden-de-adeudo-2; 
+  }
+}
+.icon-orden-de-devolucion-2 {
+  &:before {
+    content: $icon-orden-de-devolucion-2; 
+  }
+}
+.icon-orden-devolucion {
+  &:before {
+    content: $icon-orden-devolucion; 
+  }
+}
+.icon-ordenes-realizadas {
+  &:before {
+    content: $icon-ordenes-realizadas; 
+  }
+}
+.icon-organizar-datos {
+  &:before {
+    content: $icon-organizar-datos; 
+  }
+}
+.icon-Pagare {
+  &:before {
+    content: $icon-Pagare; 
+  }
+}
+.icon-Pago-financiado {
+  &:before {
+    content: $icon-Pago-financiado; 
+  }
+}
+.icon-pagos-AEAT {
+  &:before {
+    content: $icon-pagos-AEAT; 
+  }
+}
+.icon-pagos-seguridad-social {
+  &:before {
+    content: $icon-pagos-seguridad-social; 
+  }
+}
+.icon-pagos-tasas-tributos-y-recibos {
+  &:before {
+    content: $icon-pagos-tasas-tributos-y-recibos; 
+  }
+}
+.icon-pendientes-firma {
+  &:before {
+    content: $icon-pendientes-firma; 
+  }
+}
+.icon-Personalizacion {
+  &:before {
+    content: $icon-Personalizacion; 
+  }
+}
+.icon-planes {
+  &:before {
+    content: $icon-planes; 
+  }
+}
+.icon-plan-sistematico {
+  &:before {
+    content: $icon-plan-sistematico; 
+  }
+}
+.icon-posicion {
+  &:before {
+    content: $icon-posicion; 
+  }
+}
+.icon-Prefinanciacion {
+  &:before {
+    content: $icon-Prefinanciacion; 
+  }
+}
+.icon-Prefinanciacion_Transaccional {
+  &:before {
+    content: $icon-Prefinanciacion_Transaccional; 
+  }
+}
+.icon-prestamos {
+  &:before {
+    content: $icon-prestamos; 
+  }
+}
+.icon-Rechazos {
+  &:before {
+    content: $icon-Rechazos; 
+  }
+}
+.icon-recibir-ficheros-AEB-43 {
+  &:before {
+    content: $icon-recibir-ficheros-AEB-43; 
+  }
+}
+.icon-recibos-N19-adeudos-SEPA {
+  &:before {
+    content: $icon-recibos-N19-adeudos-SEPA; 
+  }
+}
+.icon-reembolso-parcial {
+  &:before {
+    content: $icon-reembolso-parcial; 
+  }
+}
+.icon-reembolso-total {
+  &:before {
+    content: $icon-reembolso-total; 
+  }
+}
+.icon-rentabilidad {
+  &:before {
+    content: $icon-rentabilidad; 
+  }
+}
+.icon-Repetir {
+  &:before {
+    content: $icon-Repetir; 
+  }
+}
+.icon-riesgo-disponible {
+  &:before {
+    content: $icon-riesgo-disponible; 
+  }
+}
+.icon-saldo-y-movimientos {
+  &:before {
+    content: $icon-saldo-y-movimientos; 
+  }
+}
+.icon-seguro_decesos {
+  &:before {
+    content: $icon-seguro_decesos; 
+  }
+}
+.icon-seguro_hogar {
+  &:before {
+    content: $icon-seguro_hogar; 
+  }
+}
+.icon-seguro_salud {
+  &:before {
+    content: $icon-seguro_salud; 
+  }
+}
+.icon-Seguros {
+  &:before {
+    content: $icon-Seguros; 
+  }
+}
+.icon-Settings {
+  &:before {
+    content: $icon-Settings; 
+  }
+}
+.icon-simulacion {
+  &:before {
+    content: $icon-simulacion; 
+  }
+}
+.icon-simulacion-reembolso {
+  &:before {
+    content: $icon-simulacion-reembolso; 
+  }
+}
+.icon-situacion {
+  &:before {
+    content: $icon-situacion; 
+  }
+}
+.icon-solicitud-devolucion {
+  &:before {
+    content: $icon-solicitud-devolucion; 
+  }
+}
+.icon-solicitud-talonario {
+  &:before {
+    content: $icon-solicitud-talonario; 
+  }
+}
+.icon-suscripcion {
+  &:before {
+    content: $icon-suscripcion; 
+  }
+}
+.icon-Talonario {
+  &:before {
+    content: $icon-Talonario; 
+  }
+}
+.icon-Tarea {
+  &:before {
+    content: $icon-Tarea; 
+  }
+}
+.icon-tarjeta-cuenta {
+  &:before {
+    content: $icon-tarjeta-cuenta; 
+  }
+}
+.icon-Telefono {
+  &:before {
+    content: $icon-Telefono; 
+  }
+}
+.icon-Tesoreria {
+  &:before {
+    content: $icon-Tesoreria; 
+  }
+}
+.icon-titulares {
+  &:before {
+    content: $icon-titulares; 
+  }
+}
+.icon-Transferencias {
+  &:before {
+    content: $icon-Transferencias; 
+  }
+}
+.icon-transferencias-a-otras-cuentas {
+  &:before {
+    content: $icon-transferencias-a-otras-cuentas; 
+  }
+}
+.icon-transferencias-N34-SEPA {
+  &:before {
+    content: $icon-transferencias-N34-SEPA; 
+  }
+}
+.icon-transferencias-periodicas {
+  &:before {
+    content: $icon-transferencias-periodicas; 
+  }
+}
+.icon-transferencias-urgentes-OMF {
+  &:before {
+    content: $icon-transferencias-urgentes-OMF; 
+  }
+}
+.icon-Traspasos {
+  &:before {
+    content: $icon-Traspasos; 
+  }
+}
+.icon-upload {
+  &:before {
+    content: $icon-upload; 
+  }
+}
+.icon-validador {
+  &:before {
+    content: $icon-validador; 
+  }
+}
+.icon-Validando {
+  &:before {
+    content: $icon-Validando; 
+  }
+}
+.icon-valores {
+  &:before {
+    content: $icon-valores; 
+  }
+}
+.icon-valor-liquidativo {
+  &:before {
+    content: $icon-valor-liquidativo; 
+  }
+}
+.icon-variacion-patrimonial {
+  &:before {
+    content: $icon-variacion-patrimonial; 
+  }
+}
+.icon-vencimientos {
+  &:before {
+    content: $icon-vencimientos; 
+  }
+}
+.icon-venta_fondos_carrito {
+  &:before {
+    content: $icon-venta_fondos_carrito; 
+  }
+}
+.icon-venta-continuo {
+  &:before {
+    content: $icon-venta-continuo; 
+  }
+}
+.icon-venta-extranjeros {
+  &:before {
+    content: $icon-venta-extranjeros; 
+  }
+}
+.icon-ver-ficheros-enviados {
+  &:before {
+    content: $icon-ver-ficheros-enviados; 
+  }
+}
+.icon-ver-ficheros-recibidos {
+  &:before {
+    content: $icon-ver-ficheros-recibidos; 
+  }
+}
+.icon-ver-mandatos {
+  &:before {
+    content: $icon-ver-mandatos; 
+  }
+}
+.icon-ver-ordenes-realizadas {
+  &:before {
+    content: $icon-ver-ordenes-realizadas; 
+  }
+}
+.icon-ver-recibos-devueltos {
+  &:before {
+    content: $icon-ver-recibos-devueltos; 
+  }
+}
+.icon-ver-solicitudes {
+  &:before {
+    content: $icon-ver-solicitudes; 
+  }
+}
+
