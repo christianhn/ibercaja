@@ -1,10 +1,11 @@
 .favorites{
-    ul{
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-        li{
-            margin-left: 15px;
+    display: flex;
+    align-items: center;
+    p{
+        margin: 0;
+        margin-left: 15px;
+        &:last-of-type{
+            margin-right: 15px;
         }
     }
 }

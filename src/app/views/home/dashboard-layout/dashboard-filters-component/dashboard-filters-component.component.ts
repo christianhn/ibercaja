@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard-filters-component',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard-filters-component.component.scss']
 })
 export class DashboardFiltersComponentComponent {
+
+  @Input() title: string = "";
+  @Input() actions: any[] = [];
+  @Input() isShown: boolean = false;
 
 }

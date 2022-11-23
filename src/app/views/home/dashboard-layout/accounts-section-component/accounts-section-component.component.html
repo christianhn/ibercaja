@@ -1,4 +1,8 @@
-<app-dashboard-filters-component></app-dashboard-filters-component>
+<app-dashboard-filters-component 
+    [title]="title"
+    [actions]="actions"
+    [isShown]="isShown"
+></app-dashboard-filters-component>
 <section class="cards-list">
     <div class="card" *ngFor="let card of cards">
         <span class="icon-Dotted"></span>

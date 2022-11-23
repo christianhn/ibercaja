@@ -1,1 +1,20 @@
-<p>card-section-component works!</p>
+<app-dashboard-filters-component 
+    [title]="title"
+    [actions]="actions"
+    [isShown]="isShown"
+></app-dashboard-filters-component>
+<section class="cards-list">
+    <div class="card" *ngFor="let card of cards">
+        <div class="title">
+            <img src="/assets/img/tarjeta-visa-one.png" alt="tarjeta">
+            <p class="name">{{ card.title }}</p>
+            <p class="payment-method">{{ card.paymentMethod }}</p>
+        </div>
+        <div class="cash">
+            <span>{{ card.cash.aviable | currency: 'EUR'}}</span>/<span>{{ card.cash.total | currency: 'EUR' }}</span>
+            <div class="graph">
+                <div [ngStyle]="{'width.vw': card.cash.width }"></div>
+            </div>
+        </div>
+    </div>
+</section>

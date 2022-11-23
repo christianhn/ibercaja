@@ -7,6 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AccountsSectionComponentComponent {
 
+  title = "Cuentas";
+  isShown = true;
+  actions = [
+    '<span class="icon-Mostrar"></span>&nbsp; Mostrar ocultas',
+    'Filtra resultados &nbsp;<span class="icon-Chevron-abajo"></span>'
+  ]
+
   cards = [
     {
       title: "Pago nóminas",

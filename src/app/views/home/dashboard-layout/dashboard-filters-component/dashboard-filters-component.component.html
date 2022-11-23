@@ -1,10 +1,9 @@
 <section class="title">
-    <p>Cuentas</p>
+    <p>{{ title }}</p>
 </section>
-<section class="actions">
+<section class="actions" *ngIf="isShown">
     <ul>
-        <li><span class="icon-Mostrar"></span>Mostrar ocultas</li>
-        <li>Filtra resultados<span class="icon-Chevron-abajo"></span></li>
+        <li *ngFor="let action of actions" [innerHTML]="action"></li>
     </ul>
     <div>
         <button class="selected"><span class="icon-muro_cuadricula"></span></button>

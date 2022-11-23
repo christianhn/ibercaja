@@ -11,7 +11,7 @@ export class NavigationMenuComponent {
     {
       id: "accounts",
       name: "Cuentas tarjetas y TPVS",
-      isShown: false
+      isShown: true
     },
     {
       id: "financing",

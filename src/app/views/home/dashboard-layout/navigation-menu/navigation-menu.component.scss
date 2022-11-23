@@ -23,7 +23,14 @@ nav{
                 padding: 0 10px;
                 text-decoration: none;
                 color: $primary-text-color;
+                display: flex;
                 cursor: pointer;
+
+                span{
+                    margin-right: 10px;
+                    margin-top: -2px;
+                    font-size: $font-size-medium;
+                }
             }
 
             &:last-child{
