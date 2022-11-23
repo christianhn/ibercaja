@@ -1,1 +1,14 @@
-<p>accounts-section-component works!</p>
+<app-dashboard-filters-component></app-dashboard-filters-component>
+<section class="cards-list">
+    <div class="card" *ngFor="let card of cards">
+        <span class="icon-Dotted"></span>
+        <p class="title">{{ card.title }}</p>
+        <p class="payment-method">{{ card.paymentMethod }}</p>
+        <p class="cash">{{ card.cash | currency:'EUR' }}</p>
+        <p class="available"><span>Disponible</span><span> {{ card.availableAmount | currency:'EUR' }} </span></p>
+        <div class="message">
+            <span class="icon-muro_mensaje"></span>
+            <span>2 Movimientos nuevos</span>
+        </div>
+    </div>
+</section>

@@ -7,4 +7,25 @@ import { Component } from '@angular/core';
 })
 export class AccountsSectionComponentComponent {
 
+  cards = [
+    {
+      title: "Pago nóminas",
+      paymentMethod: "*5493",
+      cash: 1987765.09,
+      availableAmount: "3087"
+    },
+    {
+      title: "Pago nóminas",
+      paymentMethod: "*5493",
+      cash: 1987765.09,
+      availableAmount: "3087"
+    },
+    {
+      title: "Pago nóminas",
+      paymentMethod: "*5493",
+      cash: 1987765.09,
+      availableAmount: "3087"
+    }
+  ]
+
 }

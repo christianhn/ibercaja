@@ -1,0 +1,60 @@
+@import "../../../../../scss/variables.scss";
+
+.title{
+    margin-left: 50px;
+    margin-top: 36px;
+    p{
+        font-size: $font-size-medium;
+        border-left: solid 1px $primary-text-color-t;
+        padding-left: 7px;
+        height: 12px;
+    }
+}
+
+.actions{
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    margin-top: 36px;
+    ul{
+        li{
+            display: inline-block;
+            padding: 0 15px;
+            border-right: solid 0.5px $primary-text-color-t;
+            &:last-child{
+                border-right: none;
+            }
+
+            span{
+                margin-top: 2px;
+                &.icon-Mostrar{
+                    margin-right: 10px;
+                }
+                &.icon-Chevron-abajo{
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    button{
+        padding: 4px 4px 2px 4px;
+        &:first-child{
+            border-radius: 2px 0px 0px 2px;
+        }
+        &:last-child{
+            border-radius: 0px 2px 2px 0px;
+        }
+
+        &.selected{
+            border: solid 0.5px $grey-color-date;
+            background-color: $grey-color-date;
+            color: white;
+        }
+        &.notSelected{
+            border: solid 0.5px $grey-color-date;
+            background-color: white;
+            color: $grey-color-date;       
+        }
+    }
+}

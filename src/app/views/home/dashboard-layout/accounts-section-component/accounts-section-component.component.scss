@@ -1,0 +1,83 @@
+@import "src/scss/variables.scss";
+
+app-dashboard-filters-component{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 50px;
+    .card{
+        background-color: white;
+        min-width: 20vw;
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 15%);
+        border-radius: 2px;
+        position: relative;
+        &:last-child{
+            margin-right: 0;
+        }
+
+        p{
+            padding: 0 35px;
+            
+            &.title{
+                font-size: $font-size-small;
+                padding-top: 18px;
+                margin-bottom: -5px;
+            }
+
+            &.payment-method{
+                font-size: $font-size-xsmall;
+                color: $smooth-grey-color;
+            }
+
+            &.cash{
+                font-size: $font-size-big;
+                color: $primary-color;
+                margin-top: 40px;
+                margin-bottom: -5px;
+            }
+
+            &.available{
+                font-size: $font-size-xxsmall;
+                margin-bottom: 40px;
+                &>span{
+                    margin-right: 13px;
+                }
+            }
+        }
+
+        .message{
+            border-top: solid 0.5px $grey-color;
+            padding: 15px 35px;
+            display: flex;
+            align-items: center;
+
+            span{
+                &:first-child{
+                    font-size: $font-size-small;
+                    background-color: $primary-color;
+                    color: white;
+                    border-radius: 20px;
+                    padding: 3px;
+                    margin-right: 7px;
+                }
+                &:nth-child(2){
+                    font-size: $font-size-xxsmall;
+                    
+                }
+            }
+        }
+        .icon-Dotted{
+            font-size: $font-size-small;
+            position: absolute;
+            padding: 15px;
+            right: 0;
+            color: $smooth-grey-color;
+        }
+    }
+}
