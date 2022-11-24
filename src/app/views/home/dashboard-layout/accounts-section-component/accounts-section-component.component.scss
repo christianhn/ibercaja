@@ -14,7 +14,7 @@ app-dashboard-filters-component{
     .card{
         background-color: white;
         min-width: 20vw;
-        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 15%);
+        box-shadow: $shadow;
         border-radius: 2px;
         position: relative;
         &:last-child{
@@ -58,7 +58,7 @@ app-dashboard-filters-component{
             align-items: center;
 
             span{
-                &:first-child{
+                &:nth-child(1){
                     font-size: $font-size-small;
                     background-color: $primary-color;
                     color: white;
@@ -70,6 +70,7 @@ app-dashboard-filters-component{
                     font-size: $font-size-xxsmall;
                     
                 }
+                
             }
         }
         .icon-Dotted{
@@ -80,4 +81,41 @@ app-dashboard-filters-component{
             color: $smooth-grey-color;
         }
     }
+}
+
+
+@media (max-width: 1023px) {
+    
+    .cards-list{
+        padding: 26px 5vw;
+        .card{
+            width: 90vw;
+            margin-bottom: 20px;
+
+            .title{
+                display: inline-block;
+            }
+            .payment-method{
+                display: inline-block;
+            }
+            .cash{
+                margin-top: 5px !important;
+            }
+            .available{
+                display: inline-block;
+            }
+            .message{
+                border-top: none;
+                display: inline-block;
+                right: 0;
+                position: absolute;
+                span{
+                    &:nth-child(1){
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+
 }

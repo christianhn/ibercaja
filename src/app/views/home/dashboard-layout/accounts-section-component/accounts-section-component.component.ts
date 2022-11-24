@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-accounts-section-component',
@@ -9,6 +9,8 @@ export class AccountsSectionComponentComponent {
 
   title = "Cuentas";
   isShown = true;
+  mobileSize: number = 1023;
+  isMobile: boolean = false;
   actions = [
     '<span class="icon-Mostrar"></span>&nbsp; Mostrar ocultas',
     'Filtra resultados &nbsp;<span class="icon-Chevron-abajo"></span>'
@@ -35,4 +37,21 @@ export class AccountsSectionComponentComponent {
     }
   ]
 
+  ngOnInit(): void {
+    this.isMobileCheck();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onWindowResize() {
+
+    this.isMobileCheck();
+  }
+
+  isMobileCheck(){
+    if (window.innerWidth <= this.mobileSize) {
+      this.isMobile = true;
+    } else {
+      this.isMobile = false;
+    }
+  }
 }

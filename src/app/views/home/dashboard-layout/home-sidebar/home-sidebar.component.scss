@@ -86,20 +86,17 @@ h3{
     }
 }
 
-.message{
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: $primary-color;
-    right: 0;
-    bottom: 5vh;
-    border-radius: 100px;
-    border: none;
-    margin-right: 10px;
-    box-shadow: 0px 0px 16px 1px $shadow-primary-color;
-    color: white;
-    font-size: $font-size-big;
-    height: 60px;
-    width: 60px;
+@media (max-width: 1023px) {
+    .recent-activity{
+        margin-bottom: 50px;
+        .scroll{
+            height: auto !important;
+            overflow: auto !important;
+            overflow-x: auto !important;
+        }
+    }
+
+    .needs{
+        margin-bottom: 50px;
+    }
 }

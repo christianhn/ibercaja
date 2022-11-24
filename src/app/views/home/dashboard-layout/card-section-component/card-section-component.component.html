@@ -11,9 +11,12 @@
             <p class="payment-method">{{ card.paymentMethod }}</p>
         </div>
         <div class="cash">
-            <span>{{ card.cash.aviable | currency: 'EUR'}}</span>/<span>{{ card.cash.total | currency: 'EUR' }}</span>
+            <div class="amount">
+                <span>{{ card.cash.aviable | currency: 'EUR' : 'symbol':'1.0-0'}}</span>/<span>{{ card.cash.total | currency: 'EUR' : 'symbol':'1.0-0' }}</span>
+            </div>
             <div class="graph">
-                <div [ngStyle]="{'width.vw': card.cash.width }"></div>
+                <div *ngIf="isMobile" [ngStyle]="{'width.vw': card.cash.width }"></div>
+                <div *ngIf="!isMobile" [ngStyle]="{'width.px': card.cash.width }"></div>
             </div>
         </div>
     </div>

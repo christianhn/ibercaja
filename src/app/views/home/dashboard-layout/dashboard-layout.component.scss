@@ -1,5 +1,9 @@
 @import "src/scss/variables.scss";
 
+.hide{
+    display: none;
+}
+
 .dashboard-containter{
     display: flex;
 }
@@ -32,9 +36,90 @@ section{
     width: 284px;
     padding: 20px;
     border-left: solid 1px $grey-color;
+    background-color: white;
 }
 
 .info-principal{
     background-color: $back-info-color;
     padding: 40px 0;
+}
+
+
+.message{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $primary-color;
+    right: 0;
+    bottom: 5vh;
+    border-radius: 100px;
+    border: none;
+    margin-right: 10px;
+    box-shadow: 0px 0px 16px 1px $shadow-primary-color;
+    color: white;
+    font-size: $font-size-big;
+    height: 60px;
+    width: 60px;
+    z-index: 10;
+}
+
+.arrow{
+    background-color: transparent;
+    border: 0;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    .icon-Chrevron-izquierda{
+        color: $primary-color;
+        font-weight: bold;
+        font-size: $font-size-small;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    
+    .dashboard-containter{
+        flex-direction: row;
+        position: relative;
+    }
+    
+    
+    .main-section-tablet{
+        width: 100vw;
+    }
+    .sidebar-section-tablet{
+        width: 50px;
+        padding: 0;
+    }
+
+    .open-main-section-tablet{
+        margin-right: 49px;
+    }
+    
+    .open-sidebar-section-tablet{
+        position: absolute;
+        right: 0;
+        box-shadow: $shadow;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 1023px) {
+    app-dashboard-favorites{
+        display: none;
+    }
+
+    .dashboard-containter{
+        flex-wrap: wrap;
+        
+        .main-section{
+            width: 100%;
+        }
+    
+        .sidebar-section{
+            width: 100%;
+        }
+    }
+    
 }

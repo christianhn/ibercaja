@@ -56,3 +56,12 @@
         }
     }
 }
+
+@media (max-width: 1023px) {
+    .title{
+        margin-left: 5vw ;
+    }
+    .actions{
+        display: none;
+    }    
+}

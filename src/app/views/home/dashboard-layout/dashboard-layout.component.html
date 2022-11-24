@@ -1,5 +1,9 @@
 <div class="dashboard-containter">
-    <section class="main-section">
+    <section class="main-section main-section-tablet" 
+    [ngClass]="{ 
+        'open-main-section-tablet': !isHide 
+    }" 
+    (click)="closeSidebar()">
         <div class="first-part">
             <app-dashboard-welcome></app-dashboard-welcome>
             <app-dashboard-favorites></app-dashboard-favorites>
@@ -15,7 +19,13 @@
             <app-card-section-component></app-card-section-component>
         </div>
     </section>
-    <section class="sidebar-section">
-        <app-home-sidebar></app-home-sidebar>
+    <section class="sidebar-section" 
+    [ngClass]="{ 
+        'sidebar-section-tablet': isHide,
+        'open-sidebar-section-tablet': !isHide
+    }">
+        <button class="arrow" (click)="openSidebar()"><span class="icon-Chrevron-izquierda" [ngClass]="{ 'hide': !isHide }"></span></button>
+        <app-home-sidebar [ngClass]="{ 'hide': isHide }"></app-home-sidebar>
+        <button class="message"> <span class="icon-Contacto"></span> </button>
     </section>
 </div>

@@ -10,7 +10,7 @@
         align-items: center;
         background-color: white;
         min-width: 20vw;
-        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 15%);
+        box-shadow: $shadow;
         border-radius: 2px;
         padding: 10px 25px;
 
@@ -35,17 +35,22 @@
         .cash{
             display: flex;
             align-items: center;
-            span:nth-child(1){
-                margin-right: 4px;
-            }
-            span:nth-child(2){
-                margin-left: 4px;
-                color: $grey-color-light;
+
+            .amount{
+                display: flex;
+                align-items: center;
+                span:nth-child(1){
+                    margin-right: 4px;
+                }
+                span:nth-child(2){
+                    margin-left: 4px;
+                    color: $grey-color-light;
+                }                
             }
     
             .graph {
                 margin-left: 30px;
-                width: 10vw;
+                width: 150px;
                 height: 5px;
                 border-radius: 25px;
                 background-color: $grey-color;
@@ -58,5 +63,44 @@
             }
         }
 
+    }
+}
+
+@media (max-width: 1023px) {
+    
+    .cards-list{
+        padding: 20px 5vw !important;
+        .card{
+            padding: 20px 25px !important;
+            margin-bottom: 20px;
+            display: block !important;
+            .title{
+                display: block !important;
+                img{
+                    position: absolute;
+                    margin-top: 2px;
+                }
+    
+                .name{
+                    margin: 0;
+                    margin-left: 55px;
+                }
+    
+                .payment-method{
+                    margin-top: 1px;
+                    margin-left: 55px;
+                }
+            }
+    
+            .cash{
+                display: flex !important;
+                justify-content: space-between !important;
+            }
+
+            .graph{
+                margin: 0 !important;
+                width: 30vw !important;
+            }
+        }    
     }
 }

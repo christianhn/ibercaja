@@ -1,6 +1,6 @@
 <section>
     <div class="info-type" *ngFor="let type of summary">
         <span class="name">{{ type.name | uppercase }}</span>
-        <span class="amount">{{ type.amount | currency:'EUR' }}</span>
+        <span class="amount">{{ type.amount | currency:'EUR' : 'symbol':'1.0-0' }}</span>
     </div>
 </section>

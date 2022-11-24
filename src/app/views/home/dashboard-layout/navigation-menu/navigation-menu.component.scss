@@ -11,7 +11,7 @@ nav{
         position: absolute;
         li{
             display: inline-block;
-            padding: 10px 0;
+            padding: 9px 0;
             padding-bottom: 20px;
             margin: 10px;
             margin-bottom: 0;
@@ -19,6 +19,11 @@ nav{
             &.select-level{
                 border-bottom: solid 4px $primary-color;
             }
+
+            &:has(span){
+                height: 13px;
+            }
+
             a{
                 padding: 0 10px;
                 text-decoration: none;
@@ -28,7 +33,7 @@ nav{
 
                 span{
                     margin-right: 10px;
-                    margin-top: -2px;
+                    margin-top: -3px;
                     font-size: $font-size-medium;
                 }
             }
@@ -37,6 +42,19 @@ nav{
                 &>a{
                     border-left: solid 1px;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    nav{
+
+        ul{
+            display: block;
+            li{
+                display: block !important;
+
             }
         }
     }

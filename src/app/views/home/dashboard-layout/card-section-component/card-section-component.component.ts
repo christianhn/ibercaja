@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-card-section-component',
@@ -7,10 +7,12 @@ import { Component } from '@angular/core';
 })
 export class CardSectionComponentComponent {
 
-  title = "Tarjetas";
-  isShown = false;
+  title: string = "Tarjetas";
+  isShown: boolean = false;
   actions = [];
-
+  tabletSize: number = 1280;
+  mobileSize: number = 1023;
+  isMobile: boolean = false;
   cards = [
     {
       title: "María Salas López",
@@ -25,7 +27,7 @@ export class CardSectionComponentComponent {
       title: "María Salas López",
       paymentMethod: "...5493",
       cash: {
-        aviable: 75000,
+        aviable: 65000,
         total: 100000,
         width: 0
       }
@@ -33,11 +35,34 @@ export class CardSectionComponentComponent {
   ];
 
   ngOnInit(): void {
-    
     this.cards.forEach(element => {
-      const aviableWidth = (element.cash.aviable/element.cash.total)*10;
+      let aviableWidth = (element.cash.aviable/element.cash.total)*150;
+      if ( window.innerWidth <= this.mobileSize ) {
+        this.isMobile = true;
+        aviableWidth = (element.cash.aviable/element.cash.total)*30;
+      };
       element.cash.width = aviableWidth;
     });
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onWindowResize() {
+
+    if (!this.isMobile && window.innerWidth <= this.mobileSize) {
+      this.isMobile = true;
+      this.cards.forEach(element => {
+        const aviableWidth = (element.cash.aviable/element.cash.total)*30;
+        element.cash.width = aviableWidth;
+      });
+    };
+
+    if (this.isMobile && window.innerWidth > this.mobileSize) {
+      this.isMobile = false;
+      this.cards.forEach(element => {
+        const aviableWidth = (element.cash.aviable/element.cash.total)*150;
+        element.cash.width = aviableWidth;
+      });
+    };
   }
 
 }
