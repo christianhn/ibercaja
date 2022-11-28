@@ -4,21 +4,13 @@
         'open-main-section-tablet': !isHide 
     }" 
     (click)="closeSidebar()">
-        <div class="first-part">
-            <app-dashboard-welcome></app-dashboard-welcome>
-            <app-dashboard-favorites></app-dashboard-favorites>
-        </div>
-        <div class="summary-part">
-            <app-dashboard-summary></app-dashboard-summary>
-        </div>
-        <div class="nav-menu">
-            <app-navigation-menu></app-navigation-menu>
-        </div>
+        <app-dashboard-head></app-dashboard-head>
         <div class="info-principal">
             <app-accounts-section-component></app-accounts-section-component>
             <app-card-section-component></app-card-section-component>
         </div>
     </section>
+
     <section class="sidebar-section" 
     [ngClass]="{ 
         'sidebar-section-tablet': isHide,

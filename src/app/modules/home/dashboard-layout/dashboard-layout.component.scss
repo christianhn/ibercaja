@@ -15,21 +15,9 @@ section{
     width: calc(100% - 325px);
     padding-top: 40px;
     
-    .first-part{
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        margin: 0 50px;
-    }
-
-    .summary-part{
-        margin-top: 40px;
-        margin-left: 50px;
-        padding-top: 0;
-    }
-
-    .nav-menu{
-        margin-top: 30px;
+    .info-principal{
+        background-color: $back-info-color;
+        padding: 40px 0;
     }
 }
 
@@ -38,11 +26,6 @@ section{
     padding: 20px;
     border-left: solid 1px $grey-color;
     background-color: white;
-}
-
-.info-principal{
-    background-color: $back-info-color;
-    padding: 40px 0;
 }
 
 
@@ -107,9 +90,6 @@ section{
 }
 
 @media (max-width: 1023px) {
-    app-dashboard-favorites{
-        display: none;
-    }
 
     .dashboard-containter{
         flex-wrap: wrap;

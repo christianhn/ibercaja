@@ -1,0 +1,25 @@
+@import "src/scss/variables.scss";
+
+.first-part{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0 50px;
+}
+
+.summary-part{
+    margin-top: 40px;
+    margin-left: 50px;
+    padding-top: 0;
+}
+
+.nav-menu{
+    margin-top: 30px;
+}
+
+
+@media (max-width: 1023px) {
+    app-dashboard-favorites{
+        display: none;
+    }
+}
