@@ -7,10 +7,9 @@
                 <span>{{ payment.concept }}</span>
                 <div class="amount">
                     <span>{{ payment.amount | currency:'EUR' }}</span>
-                    <img *ngIf="payment.amount>0; else negative" src="/assets/img/green-point.png" alt="">
-                    <ng-template #negative>
-                        <img src="/assets/img/red-point.png" alt="">
-                    </ng-template>
+                    <div class="color__ball" [ngClass]="{ 
+                        'color__ball--active': payment.amount>0 
+                    }" ></div>
                 </div>
             </div>
         </div>

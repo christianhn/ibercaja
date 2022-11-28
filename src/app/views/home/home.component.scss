@@ -16,7 +16,9 @@ header {
     background-color: $primary-color;
     color: $secundary-text-color;
     height: 67px;
-
+    width: 100%;
+    position: fixed;
+    z-index: 20;
     form{
         display: flex;
         align-items: center;

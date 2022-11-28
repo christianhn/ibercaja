@@ -6,6 +6,7 @@
 
 .dashboard-containter{
     display: flex;
+    padding-top: 67px;
 }
 section{
     display: block;
@@ -101,7 +102,7 @@ section{
         position: absolute;
         right: 0;
         box-shadow: $shadow;
-        height: 100vh;
+        height: 120vh;
     }
 }
 

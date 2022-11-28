@@ -66,6 +66,16 @@ h3{
                         padding: 0 5px 0 10px;
                         width: 12px;
                     }
+                    .color__ball {
+                        background-color: $color-ball-negative;        
+                        border-radius: 0.8em;        
+                        margin-left: 8px;        
+                        width: 8px;    
+                        height: 8px;
+                        &.color__ball--active {   
+                            background-color: $color-ball-positive;         
+                        }
+                    }
                 }
             }
         }
