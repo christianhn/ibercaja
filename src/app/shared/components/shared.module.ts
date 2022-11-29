@@ -5,6 +5,7 @@ import { DashboardSummaryComponent } from './dashboard-summary/dashboard-summary
 import { DashboardWelcomeComponent } from './dashboard-welcome/dashboard-welcome.component';
 import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 import { DashboardFiltersComponentComponent } from './dashboard-filters-component/dashboard-filters-component.component';
+import { ActionButtonDotsComponent } from './action-button-dots/action-button-dots.component';
 
 
 
@@ -14,14 +15,16 @@ import { DashboardFiltersComponentComponent } from './dashboard-filters-componen
     DashboardFavoritesComponent,
     DashboardWelcomeComponent,
     DashboardSummaryComponent,
-    NavigationMenuComponent
+    NavigationMenuComponent,
+    ActionButtonDotsComponent
   ],
   exports:[
     DashboardFiltersComponentComponent,
     DashboardFavoritesComponent,
     DashboardWelcomeComponent,
     DashboardSummaryComponent,
-    NavigationMenuComponent
+    NavigationMenuComponent,
+    ActionButtonDotsComponent
   ],
   imports: [
     CommonModule

@@ -21,7 +21,8 @@ export class CardSectionComponentComponent {
         aviable: 75000,
         total: 100000,
         width: 0
-      }
+      },
+      isOpenAction: false
     },
     {
       title: "María Salas López",
@@ -30,7 +31,8 @@ export class CardSectionComponentComponent {
         aviable: 65000,
         total: 100000,
         width: 0
-      }
+      },
+      isOpenAction: false
     }
   ];
 

@@ -5,7 +5,6 @@
 ></app-dashboard-filters-component>
 <section class="cards-list">
     <div class="card" *ngFor="let card of cards">
-        <span class="icon-Dotted"></span>
         <p class="title">{{ card.title }}</p>
         <p class="payment-method">{{ card.paymentMethod }}</p>
         <p class="cash">{{ card.cash | currency:'EUR' }}</p>
@@ -17,5 +16,6 @@
                 <span>2 Movimientos nuevos</span>
             </ng-template>
         </div>
+        <app-action-button-dots [card]="card"></app-action-button-dots>
     </div>
 </section>

@@ -1,0 +1,49 @@
+@import "src/scss/variables.scss";
+
+.dots{
+    z-index: 30;
+    position: absolute;
+    right: 0;
+    top: 0;
+    
+    .icon-Dotted{
+        position: absolute;
+        padding: 15px;
+        right: 0;
+        top: 0;
+        font-size: $font-size-small;
+        color: $smooth-grey-color;
+        &__open{
+            color: white;
+        }
+    }
+
+    .action-button{
+        visibility: hidden;
+        &__open{
+            visibility: initial;
+        }
+
+        width: 180px;
+        padding: 10px 0px;
+        background-color: $primary-color;
+        button{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            text-align: left;
+            width: 100%;
+            padding: 15px 10px;
+            border: 0;
+            background-color: $primary-color;
+            color: white;
+
+            span{
+                &:first-of-type{
+                    margin: 0px 10px 0px 20px;
+                    width: 20px;
+                }
+            }
+        }
+    }
+}

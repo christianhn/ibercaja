@@ -14,26 +14,29 @@ export class AccountsSectionComponentComponent {
   actions = [
     '<span class="icon-Mostrar"></span>&nbsp; Mostrar ocultas',
     'Filtra resultados &nbsp;<span class="icon-Chevron-abajo"></span>'
-  ]
+  ];
 
   cards = [
     {
       title: "Pago nóminas",
       paymentMethod: "*5493",
       cash: 1987765.09,
-      availableAmount: "3087"
+      availableAmount: "3087",
+      isOpenAction: false
     },
     {
       title: "Pago nóminas",
       paymentMethod: "*5493",
       cash: 1987765.09,
-      availableAmount: "3087"
+      availableAmount: "3087",
+      isOpenAction: false
     },
     {
       title: "Pago nóminas",
       paymentMethod: "*5493",
       cash: 1987765.09,
-      availableAmount: "3087"
+      availableAmount: "3087",
+      isOpenAction: false
     }
   ]
 
