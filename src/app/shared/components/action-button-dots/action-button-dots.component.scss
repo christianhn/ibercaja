@@ -6,17 +6,25 @@
     right: 0;
     top: 0;
     
-    .icon-Dotted{
+    >button{
+        cursor: pointer;
         position: absolute;
-        padding: 15px;
         right: 0;
         top: 0;
-        font-size: $font-size-small;
-        color: $smooth-grey-color;
-        &__open{
-            color: white;
+        border: 0;
+        background-color: transparent;
+        padding-top: 15px;
+
+        .icon-Dotted{
+            padding: 15px;
+            font-size: $font-size-small;
+            color: $smooth-grey-color;
+            &__open{
+                color: white;
+            }
         }
     }
+
 
     .action-button{
         visibility: hidden;

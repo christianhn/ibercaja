@@ -9,10 +9,7 @@ export class ActionButtonDotsComponent {
 
   @Input() card: any;
 
-  options(e:Event, card: any){ 
-    console.log(e);
-    
-    e.stopPropagation();
+  options( card: any ){     
     card.isOpenAction = !card.isOpenAction;
   }
 }

@@ -1,9 +1,9 @@
 <div class="dots">
-    <a href="https://www.google.es" (click)="options($event, card)">
+    <button href="https://www.google.es" (click)="options(card)">
         <span class="icon-Dotted" [ngClass]="{
             'icon-Dotted__open' : card.isOpenAction
         }"></span>
-    </a>
+    </button>
     <div class="action-button" 
     [ngClass]="{
         'action-button__open' : card.isOpenAction
