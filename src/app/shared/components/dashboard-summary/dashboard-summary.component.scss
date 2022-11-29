@@ -35,10 +35,15 @@ section{
 @media (max-width: 1023px) {
     section{ 
         .info-type{
+            height: auto;
             &:nth-child(1){
                 width: 100%;
                 margin-bottom: 30px;
                 border-right: 0;
+            }
+            &:last-of-type{
+                margin-right: 0;
+                padding-right: 0; 
             }
         }
     }

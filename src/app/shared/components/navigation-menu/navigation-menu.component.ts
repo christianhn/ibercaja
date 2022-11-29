@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class NavigationMenuComponent {
 
+  
   navLevels = [
     {
       id: "accounts",
@@ -30,7 +31,9 @@ export class NavigationMenuComponent {
       isShown: false
     }
   ];
-  
+  navSelected = this.navLevels.find(element => element.id === "accounts")?.name;
+  navOpened = false;
+
   selectLevel(level: any){
     
     this.navLevels.forEach(element => {
@@ -38,6 +41,11 @@ export class NavigationMenuComponent {
     });
     
     level.isShown = true;
+    this.navSelected = level.name;
+  }
+
+  openNav(){
+    this.navOpened = !this.navOpened;
   }
 
 }

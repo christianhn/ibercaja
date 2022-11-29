@@ -1,4 +1,6 @@
-<div class="dots">
+<div class="dots" [ngClass]="{
+    'dots__open' : card.isOpenAction
+}">
     <button href="https://www.google.es" (click)="options(card)">
         <span class="icon-Dotted" [ngClass]="{
             'icon-Dotted__open' : card.isOpenAction

@@ -1,5 +1,11 @@
+<button class="nav-selected" (click)="openNav()">
+    <span>{{ navSelected | uppercase }}</span>
+    <div class="arrow-icon" [ngClass]="{ 'arrow-icon__open' : navOpened}">
+        <span class="icon-Flecha-form-abajo"></span>
+    </div>
+</button>
 <nav>
-    <ul>
+    <ul [ngClass]="{ 'open' : navOpened}">
         <li 
         *ngFor="let level of navLevels" 
         id="{{ level.id }}" 

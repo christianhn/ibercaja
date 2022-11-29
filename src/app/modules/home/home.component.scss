@@ -166,6 +166,7 @@ footer{
         display: block;
         padding: 15px 25px;
         height: auto;
+        width: calc(100% - 50px);
         div {
             &:first-child{
                 justify-content: space-between;

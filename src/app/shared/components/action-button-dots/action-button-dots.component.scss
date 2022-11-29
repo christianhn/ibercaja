@@ -6,6 +6,10 @@
     right: 0;
     top: 0;
     
+    &__open{
+        z-index: 50;
+    }
+
     >button{
         cursor: pointer;
         position: absolute;
@@ -27,14 +31,14 @@
 
 
     .action-button{
+        width: 180px;
+        background-color: $primary-color;
         visibility: hidden;
         &__open{
+            z-index: 34;
             visibility: initial;
         }
 
-        width: 180px;
-        padding: 10px 0px;
-        background-color: $primary-color;
         button{
             display: flex;
             align-items: center;
@@ -45,6 +49,16 @@
             border: 0;
             background-color: $primary-color;
             color: white;
+            &:hover{
+                background-color: $primary-color-dark;
+            }
+
+            &:first-of-type{
+                padding: 25px 10px 10px 10px;
+            }
+            &:last-of-type{
+                padding: 10px 10px 25px 10px;
+            }
 
             span{
                 &:first-of-type{
