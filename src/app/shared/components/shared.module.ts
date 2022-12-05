@@ -6,6 +6,8 @@ import { DashboardWelcomeComponent } from './dashboard-welcome/dashboard-welcome
 import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 import { DashboardFiltersComponentComponent } from './dashboard-filters-component/dashboard-filters-component.component';
 import { ActionButtonDotsComponent } from './action-button-dots/action-button-dots.component';
+import { NavbarMainComponent } from './navbar-main/navbar-main.component';
+import { FooterMainComponent } from './footer-main/footer-main.component';
 
 
 
@@ -16,7 +18,9 @@ import { ActionButtonDotsComponent } from './action-button-dots/action-button-do
     DashboardWelcomeComponent,
     DashboardSummaryComponent,
     NavigationMenuComponent,
-    ActionButtonDotsComponent
+    ActionButtonDotsComponent,
+    NavbarMainComponent,
+    FooterMainComponent
   ],
   exports:[
     DashboardFiltersComponentComponent,
@@ -24,7 +28,9 @@ import { ActionButtonDotsComponent } from './action-button-dots/action-button-do
     DashboardWelcomeComponent,
     DashboardSummaryComponent,
     NavigationMenuComponent,
-    ActionButtonDotsComponent
+    ActionButtonDotsComponent,
+    NavbarMainComponent,
+    FooterMainComponent
   ],
   imports: [
     CommonModule

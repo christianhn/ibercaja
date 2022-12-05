@@ -1,5 +1,6 @@
 @import "src/scss/variables.scss";
 
+
 //Extends
 %border-header {
     border-right: solid $back-color 1px;
@@ -7,7 +8,6 @@
     border-top: 0;
     border-left: 0;
 }
-
 
 header {
     display: flex;
@@ -117,49 +117,6 @@ header {
     }
 }
 
-footer{
-    background-color: $footer-color;
-    display: flex;
-    align-items: center;
-    padding: 40px 0;
-    position: relative;
-    
-    &>.ib-icon{
-        //position: absolute;
-        width: 45px;
-        margin-left: 20px;
-    }
-
-    ul{
-        display: flex;
-        .links{
-            list-style: none;
-            a{
-                text-transform: uppercase;
-                text-decoration: none;
-                color: $secundary-text-color;
-                margin-left: 20px;
-            }
-        }
-    }
-
-    
-    
-}
-
-@media (min-width: 1024px) and (max-width: 1279px) {
-    footer{
-        ul{
-            display: block;
-            .links{
-                display: inline-block;
-                width: 25%;
-                padding: 10px 0;
-            }
-        }
-    }
-}
-
 @media (max-width: 1023px) {
 
     header{
@@ -186,24 +143,6 @@ footer{
             }
             &:nth-child(2){
                 display: none;
-            }
-        }
-    }
-
-    footer{
-        justify-content: space-between;
-        flex-direction: row-reverse;
-        padding: 15px 0 ;
-        img{
-            margin-right: 30px;
-            align-self: flex-end;
-        }
-        ul{
-            margin-left: 20px;
-            padding: 0;
-            display: block;
-            .links{
-                padding: 10px 0;
             }
         }
     }
