@@ -1,18 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeSidebarComponent } from './components/home-sidebar/home-sidebar.component';
+import { SharedModule } from '../shared/components/shared.module';
+import { FooterMainComponent } from './components/footer-main/footer-main.component';
+import { NavbarMainComponent } from './components/navbar-main/navbar-main.component';
 
 
 
 @NgModule({
   declarations: [
-    HomeSidebarComponent
+    HomeSidebarComponent,
+    NavbarMainComponent,
+    FooterMainComponent
   ],
   exports: [
-    HomeSidebarComponent
+    HomeSidebarComponent,
+    NavbarMainComponent,
+    FooterMainComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ]
 })
 export class CoreModule { }

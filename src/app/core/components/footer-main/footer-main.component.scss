@@ -1,6 +1,7 @@
 @import "src/scss/variables.scss";
 
 footer{
+    z-index: 35;
     background-color: $footer-color;
     display: flex;
     align-items: center;

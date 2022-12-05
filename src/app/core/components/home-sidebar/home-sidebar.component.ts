@@ -52,6 +52,8 @@ export class HomeSidebarComponent {
     }
   ];
 
+  bannerInfo: string = "Comprar ordenadores";
+
   @HostListener("scroll", ['$event'])
   doSomethingOnScroll(){
     if (!this.isShowScroll) {

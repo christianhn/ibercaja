@@ -18,6 +18,7 @@ nav{
             margin: 10px;
             margin-bottom: 0;
             border-radius: 3px;
+            cursor: pointer;
             &.select-level{
                 border-bottom: solid 4px $primary-color;
             }
@@ -31,7 +32,6 @@ nav{
                 text-decoration: none;
                 color: $primary-text-color;
                 display: flex;
-                cursor: pointer;
 
                 span{
                     margin-right: 10px;

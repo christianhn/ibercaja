@@ -1,5 +1,10 @@
 @import "src/scss/variables.scss";
 
+*{
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
 .hide{
     display: none;
 }
@@ -7,6 +12,23 @@
 .dashboard-containter{
     display: flex;
     padding-top: 67px;
+
+    .first-part{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin: 0 50px;
+    }
+    
+    .summary-part{
+        margin-top: 40px;
+        margin-left: 50px;
+        padding-top: 0;
+    }
+    
+    .nav-menu{
+        margin-top: 30px;
+    }
 }
 section{
     display: block;
@@ -14,18 +36,16 @@ section{
 .main-section{
     width: calc(100% - 325px);
     padding-top: 40px;
-    
-    .info-principal{
-        background-color: $back-info-color;
-        padding: 40px 0;
-    }
 }
 
 .sidebar-section{
+    z-index: 30;
     width: 284px;
     padding: 20px;
     border-left: solid 1px $grey-color;
     background-color: white;
+    // position: absolute;
+    // right: 0;
 }
 
 
@@ -41,11 +61,14 @@ section{
     border: none;
     margin-right: 10px;
     box-shadow: 0px 0px 16px 1px $shadow-primary-color;
-    color: white;
-    font-size: $font-size-big;
     height: 60px;
     width: 60px;
-    z-index: 10;
+    z-index: 50;
+    
+    span{
+        font-size: $font-size-big;
+        color: white;
+    }
 }
 
 .arrow{
@@ -100,6 +123,17 @@ section{
     
         .sidebar-section{
             width: calc(100% - 40px);
+        }
+
+        app-dashboard-favorites{
+            display: none;
+        }
+        .first-part{
+            margin: 0 5vw;
+        }
+    
+        .summary-part{
+            margin-left: 5vw;
         }
     }
     

@@ -1,0 +1,12 @@
+@import "src/scss/variables.scss";
+
+*{
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+.info-principal{
+    // width: calc(100% - 325px);
+    background-color: $back-info-color;
+    padding: 40px 0;
+}

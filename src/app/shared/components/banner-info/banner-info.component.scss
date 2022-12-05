@@ -1,0 +1,14 @@
+
+.buy-section{
+    display: flex;
+    align-items: center;
+    img{
+        width: 65px;
+    }
+    span{
+        border: solid 1px #c6c6c6;
+        border-left: 0;
+        padding: 25px;
+        width: 180px;
+    }
+}

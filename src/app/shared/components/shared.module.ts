@@ -6,8 +6,8 @@ import { DashboardWelcomeComponent } from './dashboard-welcome/dashboard-welcome
 import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 import { DashboardFiltersComponentComponent } from './dashboard-filters-component/dashboard-filters-component.component';
 import { ActionButtonDotsComponent } from './action-button-dots/action-button-dots.component';
-import { NavbarMainComponent } from './navbar-main/navbar-main.component';
-import { FooterMainComponent } from './footer-main/footer-main.component';
+import { RouterModule } from '@angular/router';
+import { BannerInfoComponent } from './banner-info/banner-info.component';
 
 
 
@@ -19,8 +19,7 @@ import { FooterMainComponent } from './footer-main/footer-main.component';
     DashboardSummaryComponent,
     NavigationMenuComponent,
     ActionButtonDotsComponent,
-    NavbarMainComponent,
-    FooterMainComponent
+    BannerInfoComponent
   ],
   exports:[
     DashboardFiltersComponentComponent,
@@ -29,11 +28,11 @@ import { FooterMainComponent } from './footer-main/footer-main.component';
     DashboardSummaryComponent,
     NavigationMenuComponent,
     ActionButtonDotsComponent,
-    NavbarMainComponent,
-    FooterMainComponent
+    BannerInfoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class SharedModule { }

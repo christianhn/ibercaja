@@ -12,22 +12,26 @@ export class NavigationMenuComponent {
     {
       id: "accounts",
       name: "Cuentas tarjetas y TPVS",
+      link: "/dashboard/accounts",
       isShown: true
     },
     {
       id: "financing",
       name: "Financiación",
+      link: "/dashboard/financing",
       isShown: false
     }, 
     {
       id: "commerce",
       name: "Comercio exterior",
+      link: "/dashboard/commerce",
       isShown: false
     },
     {
       id: "payments",
       name: "Cobros y pagos",
       icon: "icon",
+      link: "/dashboard/payments",
       isShown: false
     }
   ];

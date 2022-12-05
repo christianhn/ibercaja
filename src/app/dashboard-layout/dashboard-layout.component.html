@@ -4,11 +4,18 @@
         'open-main-section-tablet': !isHide 
     }" 
     (click)="closeSidebar()">
-        <app-dashboard-head></app-dashboard-head>
-        <div class="info-principal">
-            <app-accounts-section-component></app-accounts-section-component>
-            <app-card-section-component></app-card-section-component>
+
+        <div class="first-part">
+            <app-dashboard-welcome></app-dashboard-welcome>
+            <app-dashboard-favorites></app-dashboard-favorites>
         </div>
+        <div class="summary-part">
+            <app-dashboard-summary></app-dashboard-summary>
+        </div>
+        <div class="nav-menu">
+            <app-navigation-menu></app-navigation-menu>
+        </div>
+        <router-outlet></router-outlet>
     </section>
 
     <section class="sidebar-section" 
@@ -18,6 +25,6 @@
     }">
         <button class="arrow" (click)="openSidebar()"><span class="icon-Chrevron-izquierda" [ngClass]="{ 'hide': !isHide }"></span></button>
         <app-home-sidebar [ngClass]="{ 'hide': isHide }"></app-home-sidebar>
-        <button class="message"> <span class="icon-Contacto"></span> </button>
     </section>
+    <button class="message"> <span class="icon-Contacto"></span> </button>
 </div>

@@ -10,8 +10,9 @@
         *ngFor="let level of navLevels" 
         id="{{ level.id }}" 
         [ngClass]="{ 'select-level' : level.isShown}"
-        (click)="selectLevel(level)">
-        <a href="#"><span *ngIf="level.icon!=null" [ngClass]="{'icon-Cobros-y-pagos': level.icon!=null}"></span> {{ level.name | uppercase}}</a>
+        (click)="selectLevel(level)"
+        routerLink={{level.link}} >
+        <a><span *ngIf="level.icon!=null" [ngClass]="{'icon-Cobros-y-pagos': level.icon!=null}"></span> {{ level.name | uppercase}} </a>
     </li>
     </ul>
 </nav>
