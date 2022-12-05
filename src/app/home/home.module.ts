@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
-import { DashboardLayoutModule } from './dashboard-layout/dashboard-layout.module';
+import { CoreModule } from 'src/app/core/core.module';
+import { DashboardLayoutModule } from '../modules/dashboard-layout/dashboard-layout.module';
 
 
 
@@ -14,6 +15,7 @@ import { DashboardLayoutModule } from './dashboard-layout/dashboard-layout.modul
   ],
   imports: [
     CommonModule,
+    CoreModule,
     DashboardLayoutModule
   ]
 })

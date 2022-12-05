@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 // cambiar el locale de la aplicacion
 import localeEs from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
-import { HomeModule } from './modules/home/home.module';
+import { HomeModule } from './home/home.module';
 registerLocaleData(localeEs);
 
 @NgModule({
