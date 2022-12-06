@@ -68,4 +68,8 @@ export class CardSectionComponentComponent {
     };
   }
 
+  launchAlert(cardSelected: any){
+    var message = "Navegamos a la cuenta/tarjeta " + cardSelected.title;
+    alert(message);
+  }
 }

@@ -1,7 +1,8 @@
 <section class="cards-list">
     <div class="card card__table" 
       *ngFor="let card of cards" 
-      [ngClass]="{ 'card__table': isTable }">
+      [ngClass]="{ 'card__table': isTable }"
+      (click)="launchAlert(card)">
 
         <p class="title">{{ card.title }}</p>
         <p class="payment-method">{{ card.paymentMethod }}</p>

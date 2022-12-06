@@ -1,6 +1,6 @@
 <section class="cards-list" 
 [ngClass]="{ ' cards-list__table': isTable }">
-    <div class="card" *ngFor="let card of cards">
+    <div class="card" *ngFor="let card of cards" (click)="launchAlert(card)">
         <div class="title">
             <img src="/assets/img/tarjeta-visa-one.png" alt="tarjeta">
             <p class="name">{{ card.title }}</p>
