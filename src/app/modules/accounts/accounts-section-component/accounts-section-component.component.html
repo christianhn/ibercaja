@@ -1,10 +1,8 @@
-<app-dashboard-filters-component 
-    [title]="title"
-    [actions]="actions"
-    [isShown]="isShown"
-></app-dashboard-filters-component>
 <section class="cards-list">
-    <div class="card" *ngFor="let card of cards">
+    <div class="card card__table" 
+      *ngFor="let card of cards" 
+      [ngClass]="{ 'card__table': isTable }">
+
         <p class="title">{{ card.title }}</p>
         <p class="payment-method">{{ card.paymentMethod }}</p>
         <p class="cash">{{ card.cash | currency:'EUR' }}</p>

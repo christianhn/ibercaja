@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card-section-component',
@@ -7,6 +7,7 @@ import { Component, HostListener } from '@angular/core';
 })
 export class CardSectionComponentComponent {
 
+  @Input() isTable: boolean = false;
   title: string = "Tarjetas";
   isShown: boolean = false;
   actions = [];

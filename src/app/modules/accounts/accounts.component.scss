@@ -10,3 +10,8 @@
     background-color: $back-info-color;
     padding: 40px 0;
 }
+
+app-dashboard-filters-component{
+    display: flex;
+    justify-content: space-between;
+}

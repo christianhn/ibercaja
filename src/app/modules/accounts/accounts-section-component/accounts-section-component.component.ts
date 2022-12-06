@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 
 @Component({
   selector: 'app-accounts-section-component',
@@ -7,6 +7,7 @@ import { Component, HostListener } from '@angular/core';
 })
 export class AccountsSectionComponentComponent {
 
+  @Input() isTable: boolean = false;
   title = "Cuentas";
   isShown = true;
   mobileSize: number = 1023;

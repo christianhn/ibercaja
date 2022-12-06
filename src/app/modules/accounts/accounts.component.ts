@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AccountsComponent {
 
+  isTable: boolean = false;
+  actions = [
+    '<span class="icon-Mostrar"></span>&nbsp; Mostrar ocultas',
+    'Filtra resultados &nbsp;<span class="icon-Chevron-abajo"></span>'
+  ];
+
+
+  isTabletIndicator(event: boolean){
+    this.isTable = event;
+  }
 }

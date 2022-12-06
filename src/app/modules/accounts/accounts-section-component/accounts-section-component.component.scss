@@ -1,10 +1,5 @@
 @import "src/scss/variables.scss";
 
-app-dashboard-filters-component{
-    display: flex;
-    justify-content: space-between;
-}
-
 .cards-list{
     display: flex;
     flex-wrap: wrap;
@@ -17,11 +12,12 @@ app-dashboard-filters-component{
         box-shadow: $shadow;
         border-radius: 2px;
         position: relative;
+
         &:last-child{
             margin-right: 0;
         }
 
-        p{
+        >p{
             padding: 0 35px;
             
             &.title{
@@ -51,7 +47,7 @@ app-dashboard-filters-component{
             }
         }
 
-        .message{
+        >.message{
             border-top: solid 0.5px $grey-color;
             padding: 15px 4vw;
             display: flex;
@@ -72,6 +68,22 @@ app-dashboard-filters-component{
                     
                 }
                 
+            }
+        }
+
+        &__table{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            p{
+                margin: 0 !important;
+                padding: 30px !important;
+                font-size: $font-size-small !important;
+            }
+
+            .message{
+                display: none;
             }
         }
     }

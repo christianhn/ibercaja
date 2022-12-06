@@ -6,7 +6,7 @@
         <li *ngFor="let action of actions" [innerHTML]="action"></li>
     </ul>
     <div>
-        <button class="selected"><span class="icon-muro_cuadricula"></span></button>
-        <button class="notSelected"><span class="icon-muro_listado"></span></button>
+        <button class="" [ngClass]="{ 'selected': !isTableB, 'notSelected': isTableB }" (click)="onClickGridView()"><span class="icon-muro_cuadricula"></span></button>
+        <button class="" [ngClass]="{ 'notSelected': !isTableB, 'selected': isTableB }" (click)="onClickTableView()"><span class="icon-muro_listado"></span></button>
     </div>
 </section>

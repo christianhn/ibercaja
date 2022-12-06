@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard-filters-component',
@@ -7,8 +7,46 @@ import { Component, Input } from '@angular/core';
 })
 export class DashboardFiltersComponentComponent {
 
+  isTableB: boolean = false;
+  isMobile: boolean = false;
+  mobileSize: number = 1023;
+
   @Input() title: string = "";
   @Input() actions: any[] = [];
   @Input() isShown: boolean = false;
+
+  @Output() isTable: EventEmitter<boolean> = new EventEmitter;
+
+  ngOnInit(): void {
+    this.isTable.emit(false);
+    this.isMobileCheck();
+  }
+  
+  @HostListener('window:resize', ['$event'])
+  onWindowResize() {
+    this.isMobileCheck();
+  }
+
+  isMobileCheck(){    
+    if (window.innerWidth <= this.mobileSize) {
+      this.isMobile = true;
+      this.isTableB = false;
+      this.isTable.emit(false);
+    } else {
+      this.isMobile = false;
+    }    
+  }
+  
+  onClickGridView(){
+    this.isTable.emit(false);
+    this.isTableB = false;
+
+  }
+
+  onClickTableView(){
+    this.isTable.emit(true);
+    this.isTableB = true;
+
+  }
 
 }

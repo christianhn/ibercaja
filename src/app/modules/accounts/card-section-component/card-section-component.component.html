@@ -1,9 +1,5 @@
-<app-dashboard-filters-component 
-    [title]="title"
-    [actions]="actions"
-    [isShown]="isShown"
-></app-dashboard-filters-component>
-<section class="cards-list">
+<section class="cards-list" 
+[ngClass]="{ ' cards-list__table': isTable }">
     <div class="card" *ngFor="let card of cards">
         <div class="title">
             <img src="/assets/img/tarjeta-visa-one.png" alt="tarjeta">

@@ -14,7 +14,7 @@
         border-radius: 2px;
         padding: 10px 25px;
         position: relative;
-        .title{
+        >.title{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -32,7 +32,7 @@
         }
 
 
-        .cash{
+        >.cash{
             display: flex;
             align-items: center;
 
@@ -63,6 +63,47 @@
             }
         }
 
+    }
+    
+    &__table{
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        >.card{
+            padding: 20px 25px !important;
+            margin-bottom: 20px;
+            width: 20vw;
+            .title{
+                display: block !important;
+                img{
+                    position: absolute;
+                    margin-top: 2px;
+                }
+    
+                .name{
+                    margin: 0;
+                    margin-left: 55px;
+                }
+    
+                .payment-method{
+                    margin-top: 1px;
+                    margin-left: 55px;
+                }
+            }
+    
+            .cash{
+                display: flex !important;
+                justify-content: space-between !important;
+                width: 100%;
+            }
+    
+            .graph{
+                margin: 0 !important;
+                width: 10vw !important;
+            }
+        }
     }
 }
 
