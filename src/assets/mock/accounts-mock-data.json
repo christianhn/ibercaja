@@ -1,0 +1,105 @@
+{
+  "account": {
+      "name": "María Salas López",
+      "summary": [
+          {
+            "name": "Saldo cuentas",
+            "amount": 153000
+          },
+          {
+            "name": "Ahorro - Inversión",
+            "amount": 100000
+          },
+          {
+            "name": "Financiación",
+            "amount": 50000
+          }
+      ],
+      "accounts": [
+          {
+              "name": "Pago nóminas",
+              "lastFourNumber": "5493",
+              "balance": "1987765.09",
+              "availableAmount": "3087"      
+          },
+          {
+              "name": "Pago nóminas",
+              "lastFourNumber": "5493",
+              "balance": "1987765.09",
+              "availableAmount": "3087"      
+          },
+          {
+              "name": "Pago nóminas",
+              "lastFourNumber": "5493",
+              "balance": "1987765.09",
+              "availableAmount": "3087"      
+          }
+      ],
+      "cards": [
+          {
+              "title": "María Salas López",
+              "lastFourNumber": "5493",
+              "cash": {
+                "aviable": 75000,
+                "total": 100000,
+                "width": 0
+              },
+              "isOpenAction": false
+          },
+          {
+              "title": "María Salas López",
+              "lastFourNumber": "5493",
+              "cash": {
+                "aviable": 75000,
+                "total": 100000,
+                "width": 0
+              },
+              "isOpenAction": false
+          }
+      ],
+      "movements": [
+          {
+            "date": "22 SEP",
+            "payments": [
+              {
+                "concept": "Pago nóminas",
+                "amount": -1000
+              },
+              {
+                "concept": "Pago nóminas",
+                "amount": 799
+              },
+              {
+                "concept": "Pago nóminas",
+                "amount": 25555
+              }
+            ]
+          },
+          {
+            "date": "21 SEP",
+            "payments": [
+              {
+                "concept": "Pago nóminas",
+                "amount": -100000
+              },
+              {
+                "concept": "Pago nóminas",
+                "amount": 1000000
+              },
+              {
+                "concept": "Pago nóminas",
+                "amount": 23567
+              },
+              {
+                "concept": "Pago nóminas",
+                "amount": 2456
+              },
+              {
+                "concept": "Pago nóminas",
+                "amount": 23567
+              }
+            ]
+          }
+        ]
+  }
+}
