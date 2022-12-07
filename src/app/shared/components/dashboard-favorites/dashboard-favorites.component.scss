@@ -1,11 +1,11 @@
 .favorites{
     display: flex;
     align-items: center;
-    p{
-        margin: 0;
-        margin-left: 15px;
+    div{
+        padding: 0px 10px;
+        border-right: solid black 1px;
         &:last-of-type{
-            margin-right: 15px;
+            border-right: 0;
         }
     }
 }

@@ -6,11 +6,11 @@
     (click)="closeSidebar()">
 
         <div class="first-part">
-            <app-dashboard-welcome></app-dashboard-welcome>
+            <app-dashboard-welcome [name]="user.name"></app-dashboard-welcome>
             <app-dashboard-favorites></app-dashboard-favorites>
         </div>
         <div class="summary-part">
-            <app-dashboard-summary></app-dashboard-summary>
+            <app-dashboard-summary [summary]="user.summary"></app-dashboard-summary>
         </div>
         <div class="nav-menu">
             <app-navigation-menu></app-navigation-menu>
@@ -24,7 +24,7 @@
         'open-sidebar-section-tablet': !isHide
     }">
         <button class="arrow" (click)="openSidebar()"><span class="icon-Chrevron-izquierda" [ngClass]="{ 'hide': !isHide }"></span></button>
-        <app-home-sidebar [ngClass]="{ 'hide': isHide }"></app-home-sidebar>
+        <app-home-sidebar [ngClass]="{ 'hide': isHide }" [user]="user"></app-home-sidebar>
     </section>
     <button class="message"> <span class="icon-Contacto"></span> </button>
 </div>

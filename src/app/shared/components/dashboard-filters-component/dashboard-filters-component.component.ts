@@ -11,9 +11,8 @@ export class DashboardFiltersComponentComponent {
   isMobile: boolean = false;
   mobileSize: number = 1023;
 
-  @Input() title: string = "";
-  @Input() actions: any[] = [];
   @Input() isShown: boolean = false;
+  @Input() dashboardFilter: any;
 
   @Output() isTable: EventEmitter<boolean> = new EventEmitter;
 

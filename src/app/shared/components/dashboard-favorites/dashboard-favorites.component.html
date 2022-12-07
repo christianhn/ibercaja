@@ -1,9 +1,5 @@
 <div class="favorites">
     <span class="icon-Favoritas"></span>
-    <p>Transferencias</p>
-    <p><span>|</span></p>
-    <p>Traspasos</p>
-    <p><span>|</span></p>
-    <p>Ficheros</p>
+    <div *ngFor="let favorite of favorites"><span> {{ favorite.label  }} </span></div>
     <span class="icon-Dotted"></span>
 </div>

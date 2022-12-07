@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { AccountsService } from '../core/services/accounts/accounts.service';
+import { User } from '../shared/models/user.interface';
 
 @Component({
   selector: 'app-dashboard-layout',
@@ -11,18 +12,20 @@ export class DashboardLayoutComponent {
   isHide = true;
   tabletSize = 1280;
   mobileSize = 1023;
+  user!: User;
 
-  // constructor( 
-  //   private accountsService: AccountsService
-  // ) {}
+  constructor( 
+    private accountsService: AccountsService
+  ) {}
 
   ngOnInit(): void {
 
-    // this.accountsService.getJSON()
-    // .subscribe( res => {
-    //   console.log(res);
+    this.accountsService.getUser("id")
+    .subscribe( res => {
+      console.log(res);
       
-    // });
+      this.user = res;
+    });
 
     if ( window.innerWidth>this.mobileSize && window.innerWidth<this.tabletSize ) {
       this.isHide = true;      

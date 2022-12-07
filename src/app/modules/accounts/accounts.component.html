@@ -1,12 +1,11 @@
 <div class="info-principal">
     <app-dashboard-filters-component 
-    [title]="'Cuentas'" 
-    [actions]="actions" 
+    [dashboardFilter]="firstDashboardFilter"
     [isShown]="true"
     (isTable)="isTabletIndicator($event)"
     ></app-dashboard-filters-component>
     <app-accounts-section-component [isTable]="isTable"></app-accounts-section-component>
 
-    <app-dashboard-filters-component [title]="'Tarjetas'" [isShown]="false"></app-dashboard-filters-component>
+    <app-dashboard-filters-component [dashboardFilter]="secondDashboardFilter" [isShown]="false"></app-dashboard-filters-component>
     <app-card-section-component [isTable]="isTable"></app-card-section-component>
 </div>

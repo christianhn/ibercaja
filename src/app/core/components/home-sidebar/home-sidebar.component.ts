@@ -1,4 +1,7 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
+import { SidebarBanner } from 'src/app/shared/models/sidebarBanner.interface';
+import { Movement, User } from 'src/app/shared/models/user.interface';
+import { DashboardService } from '../../services/dashboard/dashboard.service';
 
 @Component({
   selector: 'app-home-sidebar',
@@ -6,53 +9,27 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./home-sidebar.component.scss']
 })
 export class HomeSidebarComponent {
+  @Input() user!: User;
+
   isShowScroll: boolean = false;
-  movements  = [
-    {
-      date: "22 SEP",
-      payments: [
-        {
-          concept: "Pago nóminas",
-          amount: -1000
-        },
-        {
-          concept: "Pago nóminas",
-          amount: 799
-        },
-        {
-          concept: "Pago nóminas",
-          amount: 25555
-        }
-      ]
-    },
-    {
-      date: "21 SEP",
-      payments: [
-        {
-          concept: "Pago nóminas",
-          amount: -100000
-        },
-        {
-          concept: "Pago nóminas",
-          amount: 1000000
-        },
-        {
-          concept: "Pago nóminas",
-          amount: 23567
-        },
-        {
-          concept: "Pago nóminas",
-          amount: 2456
-        },
-        {
-          concept: "Pago nóminas",
-          amount: 23567
-        }
-      ]
-    }
-  ];
+  movements: Movement[] = [];
 
   bannerInfo: string = "Comprar ordenadores";
+  bannerList: SidebarBanner[] = [];
+
+  constructor( 
+    private dashboardService: DashboardService
+  ) {}
+
+  ngOnInit(): void {
+    console.log("usuarios en home sidebar",this.user);
+    this.movements = this.user.movements;
+
+    this.dashboardService.getSidebarBanner()
+    .subscribe( res => {
+      this.bannerList = res;
+    });
+  }
 
   @HostListener("scroll", ['$event'])
   doSomethingOnScroll(){

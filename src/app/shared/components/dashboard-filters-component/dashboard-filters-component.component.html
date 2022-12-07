@@ -1,9 +1,13 @@
 <section class="title">
-    <p>{{ title }}</p>
+    <p>{{ dashboardFilter.title }}</p>
 </section>
 <section class="actions" *ngIf="isShown">
     <ul>
-        <li *ngFor="let action of actions" [innerHTML]="action"></li>
+        <li *ngFor="let action of dashboardFilter.actions"> 
+            <span class={{action.firstIcon}}></span>
+            <span> {{ action.text }} </span>
+            <span class={{action.secondIcon}}></span>
+        </li>
     </ul>
     <div>
         <button class="" [ngClass]="{ 'selected': !isTableB, 'notSelected': isTableB }" (click)="onClickGridView()"><span class="icon-muro_cuadricula"></span></button>

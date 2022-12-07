@@ -8,5 +8,6 @@ import { Component, Input } from '@angular/core';
 export class BannerInfoComponent {
 
   @Input() title: string = "";
+  @Input() img: string = "";
 
 }

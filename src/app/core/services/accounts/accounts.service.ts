@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { User } from 'src/app/shared/models/user.interface';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -9,14 +11,18 @@ export class AccountsService {
 
   baseURL: string = "/assets/mock/accounts-mock-data.json";
   
-  constructor(
-    private http: HttpClient
-    ) { }
+  constructor( private http: HttpClient ) { }
 
 
-  public getJSON(): Observable<any> {
-    console.log(this.http.get(this.baseURL));
-    
-    return this.http.get(this.baseURL);
+  public getUser( id: string ): Observable<User> {
+
+    if ( environment.api_accounts_mock ) {
+      console.log(this.http.get(this.baseURL));
+      return this.http.get<User>(this.baseURL);
+    } else {
+      // Api get accounts
+      return this.http.get<User>(this.baseURL);
+    }
+
   }
 }

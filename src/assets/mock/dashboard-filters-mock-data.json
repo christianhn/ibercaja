@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Cuentas",
+    "actions": [
+      {
+        "firstIcon": "icon-Mostrar",
+        "text": "Mostrar ocultas",
+        "secondIcon": ""
+      },
+      {
+        "firstIcon": "",
+        "text": "Filtra resultados",
+        "secondIcon": "icon-Chevron-abajo"
+      }
+    ]
+  },
+  {
+    "title": "Tarjetas"
+  }
+]
