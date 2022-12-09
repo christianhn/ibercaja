@@ -53,7 +53,7 @@
             display: flex;
             align-items: center;
 
-            span{
+            >span{
                 &:nth-child(1){
                     font-size: $font-size-small;
                     background-color: $primary-color;

@@ -1,0 +1,36 @@
+@import "src/scss/variables.scss";
+
+section{
+    margin: 15px 50px;
+    padding: 10px;
+    border: solid 1px $grey-color-light;
+    border-radius: 5px;
+    width: 14vw;
+    max-width: 220px;
+    min-width: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span{
+        &:first-of-type{
+            padding: 10px;
+            background-color: $color-warning;
+            color: white;
+            border-radius: 3px;
+        }
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    section{
+    }
+}
+
+@media (max-width: 1023px) {
+    section{
+        max-width: 250px;
+        min-width: 180px;
+        margin: 15px 5vw;
+    }
+}

@@ -9,6 +9,7 @@
             <app-dashboard-welcome [name]="user.name"></app-dashboard-welcome>
             <app-dashboard-favorites></app-dashboard-favorites>
         </div>
+        <app-warning [notifications]="user.notifications"></app-warning>
         <div class="summary-part">
             <app-dashboard-summary [summary]="user.summary"></app-dashboard-summary>
         </div>

@@ -25,7 +25,8 @@ export class CardSectionComponentComponent implements OnChanges, OnInit{
     summary: [],
     accounts: [],
     cards: [],
-    movements: []
+    movements: [],
+    notifications: []
   };
 
   constructor( 

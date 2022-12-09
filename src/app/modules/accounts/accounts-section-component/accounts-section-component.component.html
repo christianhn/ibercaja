@@ -9,10 +9,10 @@
         <p class="cash">{{ card.balance | currency:'EUR' }}</p>
         <p class="available"><span>Disponible</span><span> {{ card.availableAmount | currency:'EUR' }} </span></p>
         <div class="message">
-            <span *ngIf="isMobile; else notMobile">2</span>
+            <span *ngIf="isMobile; else notMobile">{{ card.movements.number }}</span>
             <ng-template #notMobile>
                 <span class="icon-muro_mensaje"></span>
-                <span>2 Movimientos nuevos</span>
+                <span><span *ngIf="card.movements.number>0">{{ card.movements.number }}</span> {{ card.movements.number | i18nPlural : textMap }}</span>
             </ng-template>
         </div>
         <app-action-button-dots [card]="card"></app-action-button-dots>

@@ -20,7 +20,8 @@ export class DashboardLayoutComponent {
     summary: [],
     accounts: [],
     cards: [],
-    movements: []
+    movements: [],
+    notifications: []
   };
   
   constructor( 

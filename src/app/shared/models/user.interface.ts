@@ -7,6 +7,7 @@ export interface User {
     accounts: Account[];
     cards: Card[];
     movements: Movement[];
+    notifications: Notification[];
 }
 
 export interface Summary {
@@ -19,6 +20,11 @@ export interface Account {
     lastFourNumber: string;
     balance: string;
     availableAmount: string;
+    movements: accountsMovements
+}
+
+export interface accountsMovements {
+    number: number;
 }
 
 export interface Card {
@@ -42,4 +48,10 @@ export interface Movement {
 export interface Payment {
     concept: string;
     amount: number;
+}
+
+export interface Notification {
+    icon: string;
+    number: number;
+    summary: string;
 }

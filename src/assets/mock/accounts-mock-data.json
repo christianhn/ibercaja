@@ -22,19 +22,28 @@
       "name": "Pago nóminas",
       "lastFourNumber": "5493",
       "balance": 1987765.09,
-      "availableAmount": "3087"      
+      "availableAmount": "3087",
+      "movements": {
+        "number": 1
+      }  
     },
     {
       "name": "Pago nóminas",
       "lastFourNumber": "5493",
       "balance": 1987765.09,
-      "availableAmount": "3087"      
+      "availableAmount": "3087",
+      "movements": {
+        "number": 2
+      }
     },
     {
       "name": "Pago nóminas",
       "lastFourNumber": "5493",
       "balance": 1987765.09,
-      "availableAmount": "3087"      
+      "availableAmount": "3087",
+      "movements": {
+        "number": 0
+      }    
     }
   ],
   "cards": [
@@ -101,6 +110,13 @@
           "amount": 23567
         }
       ]
+    }
+  ],
+  "notifications":[
+    {
+      "icon": "Firma-2",
+      "number": 2,
+      "summary": "Firmas pendientes"
     }
   ]
 }

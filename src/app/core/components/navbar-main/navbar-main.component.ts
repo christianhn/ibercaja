@@ -17,7 +17,8 @@ export class NavbarMainComponent {
     summary: [],
     accounts: [],
     cards: [],
-    movements: []
+    movements: [],
+    notifications: []
   };
 
   constructor( 

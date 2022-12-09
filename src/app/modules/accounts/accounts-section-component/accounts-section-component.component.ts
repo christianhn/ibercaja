@@ -1,13 +1,13 @@
-import { Component, HostListener, Input } from '@angular/core';
+import { Component, HostListener, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { AccountsService } from 'src/app/core/services/accounts/accounts.service';
-import { User } from 'src/app/shared/models/user.interface';
+import { Account, User } from 'src/app/shared/models/user.interface';
 
 @Component({
   selector: 'app-accounts-section-component',
   templateUrl: './accounts-section-component.component.html',
   styleUrls: ['./accounts-section-component.component.scss']
 })
-export class AccountsSectionComponentComponent {
+export class AccountsSectionComponentComponent implements OnInit {
 
   @Input() isTable: boolean = false;
   isShown = true;
@@ -21,9 +21,16 @@ export class AccountsSectionComponentComponent {
     summary: [],
     accounts: [],
     cards: [],
-    movements: []
+    movements: [],
+    notifications: []
   };
   
+  textMap:any = {
+    "=0": "No hay mensajes nuevos",
+    "=1": "Mensaje nuevo",
+    "=2": "Mensajes nuevos"
+  }
+
   constructor( 
     private accountsService: AccountsService
   ) {}
@@ -51,8 +58,8 @@ export class AccountsSectionComponentComponent {
     }
   }
 
-  launchAlert(cardSelected: any){
-    var message = "Navegamos a la cuenta/tarjeta " + cardSelected.title;
+  launchAlert(cardSelected: Account){
+    var message = "Navegamos a la cuenta/tarjeta " + cardSelected.name;
     alert(message);
   }
 }
