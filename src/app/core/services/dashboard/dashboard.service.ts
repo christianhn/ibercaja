@@ -69,7 +69,6 @@ export class DashboardService {
   public getSidebarBanner(): Observable<SidebarBanner[]> {
 
     if ( environment.api_accounts_mock ) {
-      console.log(this.http.get(this.sidebarBannerURL));
       return this.http.get<SidebarBanner[]>(this.sidebarBannerURL);
     } else {
       // Api get text of dashboard interface

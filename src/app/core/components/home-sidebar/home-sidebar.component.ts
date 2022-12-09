@@ -1,4 +1,4 @@
-import { Component, HostListener, Input } from '@angular/core';
+import { Component, HostListener, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { SidebarBanner } from 'src/app/shared/models/sidebarBanner.interface';
 import { Movement, User } from 'src/app/shared/models/user.interface';
 import { DashboardService } from '../../services/dashboard/dashboard.service';
@@ -8,7 +8,7 @@ import { DashboardService } from '../../services/dashboard/dashboard.service';
   templateUrl: './home-sidebar.component.html',
   styleUrls: ['./home-sidebar.component.scss']
 })
-export class HomeSidebarComponent {
+export class HomeSidebarComponent implements OnChanges {
   @Input() user!: User;
 
   isShowScroll: boolean = false;
@@ -22,12 +22,16 @@ export class HomeSidebarComponent {
   ) {}
 
   ngOnInit(): void {
-    this.movements = this.user.movements;
-
     this.dashboardService.getSidebarBanner()
     .subscribe( res => {
       this.bannerList = res;
     });
+  }
+
+  ngOnChanges( changes: SimpleChanges ): void{
+    if ( changes['user'] && changes['user'].currentValue !== undefined ){
+      this.movements = this.user.movements;
+    }
   }
 
   @HostListener("scroll", ['$event'])

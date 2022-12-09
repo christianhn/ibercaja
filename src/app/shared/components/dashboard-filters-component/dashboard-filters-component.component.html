@@ -1,9 +1,9 @@
 <section class="title">
-    <p>{{ dashboardFilter.title }}</p>
+    <p>{{ title }}</p>
 </section>
 <section class="actions" *ngIf="isShown">
     <ul>
-        <li *ngFor="let action of dashboardFilter.actions"> 
+        <li *ngFor="let action of actions"> 
             <span class={{action.firstIcon}}></span>
             <span> {{ action.text }} </span>
             <span class={{action.secondIcon}}></span>

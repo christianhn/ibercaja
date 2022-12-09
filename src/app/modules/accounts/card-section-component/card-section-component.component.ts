@@ -30,52 +30,28 @@ export class CardSectionComponentComponent {
 
   constructor( 
     private accountsService: AccountsService
-  ) {
+  ) {}
+
+  ngOnInit(): void {
+    this.getUser();
+  }
+
+  getUser(){
     this.accountsService.getUser("id")
     .subscribe(res => {
-      console.log("RESPUESTA ######");
-      
-      console.log("respuesta #####", res);
-      
+          
       this.user = res;
       this.cards = this.user.cards;
 
-    });
-  }
-
-  async ngOnInit(): Promise<void> {
-    console.log("1");
-    await this.getUser();
-    console.log("3");
-    
-    console.log("for de cards", this.cards);
-    
-    this.cards.forEach(element => {
-      console.log("elemento de card", element);
-      
-      let aviableWidth = (element.cash.aviable/element.cash.total)*150;
-      if ( window.innerWidth <= this.mobileSize ) {
-        this.isMobile = true;
-        aviableWidth = (element.cash.aviable/element.cash.total)*30;
-      };
-      element.cash.width = aviableWidth;
-    });
-  }
-
-  async getUser(){
-    await this.accountsService.getUser("id")
-    .subscribe(res => {
-      console.log("RESPUESTA ######");
-      
-      console.log("respuesta #####", res);
-      
-      this.user = res;
-      this.cards = this.user.cards;
-
-    });
-    console.log("2");
-    console.log("usuario", this.user);
-    
+      this.cards.forEach(element => {        
+        let aviableWidth = (element.cash.aviable/element.cash.total)*150;
+        if ( window.innerWidth <= this.mobileSize ) {
+          this.isMobile = true;
+          aviableWidth = (element.cash.aviable/element.cash.total)*30;
+        };
+        element.cash.width = aviableWidth;
+      });
+    });    
   }
 
   @HostListener('window:resize', ['$event'])
