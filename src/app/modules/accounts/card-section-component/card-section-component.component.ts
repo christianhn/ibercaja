@@ -1,4 +1,6 @@
 import { Component, HostListener, Input } from '@angular/core';
+import { AccountsService } from 'src/app/core/services/accounts/accounts.service';
+import { Card, User } from 'src/app/shared/models/user.interface';
 
 @Component({
   selector: 'app-card-section-component',
@@ -14,31 +16,43 @@ export class CardSectionComponentComponent {
   tabletSize: number = 1280;
   mobileSize: number = 1023;
   isMobile: boolean = false;
-  cards = [
-    {
-      title: "María Salas López",
-      paymentMethod: "...5493",
-      cash: {
-        aviable: 75000,
-        total: 100000,
-        width: 0
-      },
-      isOpenAction: false
-    },
-    {
-      title: "María Salas López",
-      paymentMethod: "...5493",
-      cash: {
-        aviable: 65000,
-        total: 100000,
-        width: 0
-      },
-      isOpenAction: false
-    }
-  ];
+  cards: Card[] = [];
+  user: User = {
+    id: '',
+    name: '',
+    firstSurname: '',
+    secondSurname: '',
+    summary: [],
+    accounts: [],
+    cards: [],
+    movements: []
+  };
 
-  ngOnInit(): void {
+  constructor( 
+    private accountsService: AccountsService
+  ) {
+    this.accountsService.getUser("id")
+    .subscribe(res => {
+      console.log("RESPUESTA ######");
+      
+      console.log("respuesta #####", res);
+      
+      this.user = res;
+      this.cards = this.user.cards;
+
+    });
+  }
+
+  async ngOnInit(): Promise<void> {
+    console.log("1");
+    await this.getUser();
+    console.log("3");
+    
+    console.log("for de cards", this.cards);
+    
     this.cards.forEach(element => {
+      console.log("elemento de card", element);
+      
       let aviableWidth = (element.cash.aviable/element.cash.total)*150;
       if ( window.innerWidth <= this.mobileSize ) {
         this.isMobile = true;
@@ -46,6 +60,22 @@ export class CardSectionComponentComponent {
       };
       element.cash.width = aviableWidth;
     });
+  }
+
+  async getUser(){
+    await this.accountsService.getUser("id")
+    .subscribe(res => {
+      console.log("RESPUESTA ######");
+      
+      console.log("respuesta #####", res);
+      
+      this.user = res;
+      this.cards = this.user.cards;
+
+    });
+    console.log("2");
+    console.log("usuario", this.user);
+    
   }
 
   @HostListener('window:resize', ['$event'])

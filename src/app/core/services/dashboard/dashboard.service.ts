@@ -25,7 +25,6 @@ export class DashboardService {
   public getDashboardFilters(): Observable<DashboardFilter[]> {
 
     if ( environment.api_accounts_mock ) {
-      console.log(this.http.get(this.dashboardFiltersURL));
       return this.http.get<DashboardFilter[]>(this.dashboardFiltersURL);
     } else {
       // Api get text of dashboard interface
@@ -37,10 +36,6 @@ export class DashboardService {
   public getFavorites(): Observable<Favorite[]> {
 
     if ( environment.api_accounts_mock ) {
-      this.http.get(this.favoritesURL)
-      .subscribe( res => {
-        console.log("API",res);
-      });
       return this.http.get<Favorite[]>(this.favoritesURL);
     } else {
       // Api get text of dashboard interface
@@ -52,7 +47,6 @@ export class DashboardService {
   public getFooter(): Observable<Footer[]> {
 
     if ( environment.api_accounts_mock ) {
-      console.log(this.http.get(this.footerURL));
       return this.http.get<Footer[]>(this.footerURL);
     } else {
       // Api get text of dashboard interface
@@ -64,7 +58,6 @@ export class DashboardService {
   public getNavLevels(): Observable<NavLevel[]> {
 
     if ( environment.api_accounts_mock ) {
-      console.log(this.http.get(this.navLevelsURL));
       return this.http.get<NavLevel[]>(this.navLevelsURL);
     } else {
       // Api get text of dashboard interface

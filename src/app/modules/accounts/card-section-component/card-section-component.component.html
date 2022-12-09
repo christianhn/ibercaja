@@ -4,12 +4,13 @@
         <div class="title">
             <img src="/assets/img/tarjeta-visa-one.png" alt="tarjeta">
             <p class="name">{{ card.title }}</p>
-            <p class="payment-method">{{ card.paymentMethod }}</p>
+            <p class="payment-method">{{ card.lastFourNumber }}</p>
         </div>
         <div class="cash">
             <div class="amount">
                 <span>{{ card.cash.aviable | currency: 'EUR' : 'symbol':'1.0-0'}}</span>/<span>{{ card.cash.total | currency: 'EUR' : 'symbol':'1.0-0' }}</span>
             </div>
+            {{card.cash.width}}
             <div class="graph">
                 <div *ngIf="isMobile" [ngStyle]="{'width.vw': card.cash.width }"></div>
                 <div *ngIf="!isMobile" [ngStyle]="{'width.px': card.cash.width }"></div>

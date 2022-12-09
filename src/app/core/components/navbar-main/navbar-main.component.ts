@@ -9,19 +9,28 @@ import { AccountsService } from '../../services/accounts/accounts.service';
 })
 export class NavbarMainComponent {
 
-  user!: User;
+  user: User = {
+    id: '',
+    name: '',
+    firstSurname: '',
+    secondSurname: '',
+    summary: [],
+    accounts: [],
+    cards: [],
+    movements: []
+  };
 
   constructor( 
     private accountsService: AccountsService
-  ) {}
-
-  ngOnInit(): void {
+  ) {
     this.accountsService.getUser("id")
     .subscribe( res => {
-      console.log(res);
-      
       this.user = res;
     });
+  }
+
+  ngOnInit(): void {
+
   }
 
 }

@@ -17,7 +17,6 @@ export class AccountsService {
   public getUser( id: string ): Observable<User> {
 
     if ( environment.api_accounts_mock ) {
-      console.log(this.http.get(this.baseURL));
       return this.http.get<User>(this.baseURL);
     } else {
       // Api get accounts

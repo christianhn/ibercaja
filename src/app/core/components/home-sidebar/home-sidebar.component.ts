@@ -22,7 +22,6 @@ export class HomeSidebarComponent {
   ) {}
 
   ngOnInit(): void {
-    console.log("usuarios en home sidebar",this.user);
     this.movements = this.user.movements;
 
     this.dashboardService.getSidebarBanner()

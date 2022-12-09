@@ -12,8 +12,17 @@ export class DashboardLayoutComponent {
   isHide = true;
   tabletSize = 1280;
   mobileSize = 1023;
-  user!: User;
-
+  user: User = {
+    id: '',
+    name: '',
+    firstSurname: '',
+    secondSurname: '',
+    summary: [],
+    accounts: [],
+    cards: [],
+    movements: []
+  };
+  
   constructor( 
     private accountsService: AccountsService
   ) {}
@@ -21,9 +30,7 @@ export class DashboardLayoutComponent {
   ngOnInit(): void {
 
     this.accountsService.getUser("id")
-    .subscribe( res => {
-      console.log(res);
-      
+    .subscribe( res => {      
       this.user = res;
     });
 

@@ -1,6 +1,6 @@
 export interface DashboardFilter {
     title: string;
-    actions: string[];
+    actions: Actions[];
 }
 
 export interface Actions {

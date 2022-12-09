@@ -1,4 +1,5 @@
 import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
+import { DashboardFilter } from '../../models/dashboardFilter.interface';
 
 @Component({
   selector: 'app-dashboard-filters-component',
@@ -10,13 +11,22 @@ export class DashboardFiltersComponentComponent {
   isTableB: boolean = false;
   isMobile: boolean = false;
   mobileSize: number = 1023;
+  dashboardFilterAux: DashboardFilter = {
+    title: '',
+    actions: []
+  };
 
   @Input() isShown: boolean = false;
-  @Input() dashboardFilter: any;
+  @Input() dashboardFilter: DashboardFilter = {
+    title: '',
+    actions: []
+  };
 
   @Output() isTable: EventEmitter<boolean> = new EventEmitter;
 
   ngOnInit(): void {
+    console.log(this.dashboardFilter);
+    this.dashboardFilterAux = this.dashboardFilter;
     this.isTable.emit(false);
     this.isMobileCheck();
   }

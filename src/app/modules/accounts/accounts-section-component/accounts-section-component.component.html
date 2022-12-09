@@ -1,12 +1,12 @@
 <section class="cards-list">
     <div class="card card__table" 
-      *ngFor="let card of cards" 
+      *ngFor="let card of user.accounts" 
       [ngClass]="{ 'card__table': isTable }"
       (click)="launchAlert(card)">
 
-        <p class="title">{{ card.title }}</p>
-        <p class="payment-method">{{ card.paymentMethod }}</p>
-        <p class="cash">{{ card.cash | currency:'EUR' }}</p>
+        <p class="title">{{ card.name }}</p>
+        <p class="payment-method">{{ card.lastFourNumber }}</p>
+        <p class="cash">{{ card.balance | currency:'EUR' }}</p>
         <p class="available"><span>Disponible</span><span> {{ card.availableAmount | currency:'EUR' }} </span></p>
         <div class="message">
             <span *ngIf="isMobile; else notMobile">2</span>

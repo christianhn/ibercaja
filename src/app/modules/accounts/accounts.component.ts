@@ -10,13 +10,8 @@ import { DashboardFilter } from 'src/app/shared/models/dashboardFilter.interface
 export class AccountsComponent {
 
   isTable: boolean = false;
-  actions = [
-    '<span class="icon-Mostrar"></span>&nbsp; Mostrar ocultas',
-    'Filtra resultados &nbsp;<span class="icon-Chevron-abajo"></span>'
-  ];
-
-  firstDashboardFilter: DashboardFilter | undefined;
-  secondDashboardFilter: DashboardFilter | undefined;
+  firstDashboardFilter: any;
+  secondDashboardFilter: any;
 
   constructor( 
     private dashboardService: DashboardService

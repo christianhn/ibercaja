@@ -21,19 +21,19 @@
     {
       "name": "Pago nóminas",
       "lastFourNumber": "5493",
-      "balance": "1987765.09",
+      "balance": 1987765.09,
       "availableAmount": "3087"      
     },
     {
       "name": "Pago nóminas",
       "lastFourNumber": "5493",
-      "balance": "1987765.09",
+      "balance": 1987765.09,
       "availableAmount": "3087"      
     },
     {
       "name": "Pago nóminas",
       "lastFourNumber": "5493",
-      "balance": "1987765.09",
+      "balance": 1987765.09,
       "availableAmount": "3087"      
     }
   ],
@@ -52,7 +52,7 @@
       "title": "María Salas López",
       "lastFourNumber": "5493",
       "cash": {
-        "aviable": 75000,
+        "aviable": 65000,
         "total": 100000,
         "width": 0
       },

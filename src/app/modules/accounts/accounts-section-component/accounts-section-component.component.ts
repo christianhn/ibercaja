@@ -1,4 +1,6 @@
 import { Component, HostListener, Input } from '@angular/core';
+import { AccountsService } from 'src/app/core/services/accounts/accounts.service';
+import { User } from 'src/app/shared/models/user.interface';
 
 @Component({
   selector: 'app-accounts-section-component',
@@ -8,41 +10,31 @@ import { Component, HostListener, Input } from '@angular/core';
 export class AccountsSectionComponentComponent {
 
   @Input() isTable: boolean = false;
-  title = "Cuentas";
   isShown = true;
   mobileSize: number = 1023;
   isMobile: boolean = false;
-  actions = [
-    '<span class="icon-Mostrar"></span>&nbsp; Mostrar ocultas',
-    'Filtra resultados &nbsp;<span class="icon-Chevron-abajo"></span>'
-  ];
-
-  cards = [
-    {
-      title: "Pago nóminas",
-      paymentMethod: "*5493",
-      cash: 1987765.09,
-      availableAmount: "3087",
-      isOpenAction: false
-    },
-    {
-      title: "Pago nóminas",
-      paymentMethod: "*5493",
-      cash: 1987765.09,
-      availableAmount: "3087",
-      isOpenAction: false
-    },
-    {
-      title: "Pago nóminas",
-      paymentMethod: "*5493",
-      cash: 1987765.09,
-      availableAmount: "3087",
-      isOpenAction: false
-    }
-  ]
+  user: User = {
+    id: '',
+    name: '',
+    firstSurname: '',
+    secondSurname: '',
+    summary: [],
+    accounts: [],
+    cards: [],
+    movements: []
+  };
+  
+  constructor( 
+    private accountsService: AccountsService
+  ) {}
 
   ngOnInit(): void {
     this.isMobileCheck();
+
+    this.accountsService.getUser("id")
+    .subscribe( res => {      
+      this.user = res;
+    });
   }
 
   @HostListener('window:resize', ['$event'])
