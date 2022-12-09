@@ -13,3 +13,11 @@
         width: 180px;
     }
 }
+
+@media (max-width: 1023px) {
+    .buy-section{
+        span{
+            width: 100%;
+        }
+    }
+}

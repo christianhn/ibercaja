@@ -1,4 +1,4 @@
-import { Component, HostListener, Input } from '@angular/core';
+import { Component, HostListener, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { AccountsService } from 'src/app/core/services/accounts/accounts.service';
 import { Card, User } from 'src/app/shared/models/user.interface';
 
@@ -7,7 +7,7 @@ import { Card, User } from 'src/app/shared/models/user.interface';
   templateUrl: './card-section-component.component.html',
   styleUrls: ['./card-section-component.component.scss']
 })
-export class CardSectionComponentComponent {
+export class CardSectionComponentComponent implements OnChanges, OnInit{
 
   @Input() isTable: boolean = false;
   title: string = "Tarjetas";
@@ -15,7 +15,7 @@ export class CardSectionComponentComponent {
   actions = [];
   tabletSize: number = 1280;
   mobileSize: number = 1023;
-  isMobile: boolean = false;
+  isPxWith: boolean = true;
   cards: Card[] = [];
   user: User = {
     id: '',
@@ -36,6 +36,12 @@ export class CardSectionComponentComponent {
     this.getUser();
   }
 
+  ngOnChanges( changes: SimpleChanges ): void{    
+    if ( changes['isTable'] && changes['isTable'].currentValue !== undefined ){
+      this.calculateAviableWith();
+    }
+  }
+
   getUser(){
     this.accountsService.getUser("id")
     .subscribe(res => {
@@ -43,39 +49,35 @@ export class CardSectionComponentComponent {
       this.user = res;
       this.cards = this.user.cards;
 
-      this.cards.forEach(element => {        
-        let aviableWidth = (element.cash.aviable/element.cash.total)*150;
-        if ( window.innerWidth <= this.mobileSize ) {
-          this.isMobile = true;
-          aviableWidth = (element.cash.aviable/element.cash.total)*30;
-        };
-        element.cash.width = aviableWidth;
-      });
+      this.calculateAviableWith();
+
     });    
   }
 
   @HostListener('window:resize', ['$event'])
   onWindowResize() {
-
-    if (!this.isMobile && window.innerWidth <= this.mobileSize) {
-      this.isMobile = true;
-      this.cards.forEach(element => {
-        const aviableWidth = (element.cash.aviable/element.cash.total)*30;
-        element.cash.width = aviableWidth;
-      });
-    };
-
-    if (this.isMobile && window.innerWidth > this.mobileSize) {
-      this.isMobile = false;
-      this.cards.forEach(element => {
-        const aviableWidth = (element.cash.aviable/element.cash.total)*150;
-        element.cash.width = aviableWidth;
-      });
-    };
+    this.calculateAviableWith();
   }
 
   launchAlert(cardSelected: any){
     var message = "Navegamos a la cuenta/tarjeta " + cardSelected.title;
     alert(message);
+  }
+
+  calculateAviableWith(): void{    
+    this.cards.forEach(element => {        
+      let aviableWidth = (element.cash.aviable/element.cash.total)*150;
+      if ( window.innerWidth <= this.mobileSize ) {
+        this.isPxWith = false;
+        aviableWidth = (element.cash.aviable/element.cash.total)*30;
+      } else if ( this.isTable ) {
+        this.isPxWith = false;
+        aviableWidth = (element.cash.aviable/element.cash.total)*7;
+      } else {
+        this.isPxWith = true;
+        aviableWidth = (element.cash.aviable/element.cash.total)*150;
+      }
+      element.cash.width = aviableWidth;
+    });   
   }
 }
