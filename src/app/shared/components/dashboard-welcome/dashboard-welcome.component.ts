@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard-welcome',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard-welcome.component.scss']
 })
 export class DashboardWelcomeComponent {
+  @Input() name: string = "";
+
   date: Date = new Date();
-  
 }

@@ -1,25 +1,37 @@
-import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Actions, DashboardFilter } from '../../models/dashboardFilter.interface';
 
 @Component({
   selector: 'app-dashboard-filters-component',
   templateUrl: './dashboard-filters-component.component.html',
   styleUrls: ['./dashboard-filters-component.component.scss']
 })
-export class DashboardFiltersComponentComponent {
+export class DashboardFiltersComponentComponent implements OnInit, OnChanges{
 
   isTableB: boolean = false;
   isMobile: boolean = false;
   mobileSize: number = 1023;
+  title: string = "";
+  actions: Actions[] = [];
 
-  @Input() title: string = "";
-  @Input() actions: any[] = [];
   @Input() isShown: boolean = false;
+  @Input() dashboardFilter: DashboardFilter = {
+    title: '',
+    actions: []
+  };
 
   @Output() isTable: EventEmitter<boolean> = new EventEmitter;
 
   ngOnInit(): void {
     this.isTable.emit(false);
     this.isMobileCheck();
+  }
+
+  ngOnChanges( changes: SimpleChanges ): void{
+    if ( changes['dashboardFilter'] && changes['dashboardFilter'].currentValue !== undefined ){
+      this.title = this.dashboardFilter.title;
+      this.actions = this.dashboardFilter.actions;
+    }
   }
   
   @HostListener('window:resize', ['$event'])

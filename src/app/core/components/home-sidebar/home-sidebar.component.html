@@ -15,8 +15,8 @@
         </div>
     </div>
 </section>
-<section class="needs">
-    <h3>Necesidades</h3>
-    <app-banner-info [title]="bannerInfo"></app-banner-info>
+<section class="needs" *ngFor="let section of bannerList">
+    <h3>{{ section.title }}</h3>
+    <app-banner-info *ngFor="let banner of section.banner" [title]=banner.text [img]=banner.img></app-banner-info>
 </section>
 

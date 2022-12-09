@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { DashboardService } from 'src/app/core/services/dashboard/dashboard.service';
+import { Summary } from '../../models/user.interface';
 
 @Component({
   selector: 'app-dashboard-summary',
@@ -7,19 +9,6 @@ import { Component } from '@angular/core';
 })
 export class DashboardSummaryComponent {
 
-  summary = [
-    {
-      name: "Saldo cuentas",
-      amount: 153000
-    },
-    {
-      name: "Ahorro - Inversión",
-      amount: 100000
-    },
-    {
-      name: "Financiación",
-      amount: 50000
-    }
-  ]
+  @Input() summary!: Summary[];
 
 }

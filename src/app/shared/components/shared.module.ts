@@ -8,6 +8,7 @@ import { DashboardFiltersComponentComponent } from './dashboard-filters-componen
 import { ActionButtonDotsComponent } from './action-button-dots/action-button-dots.component';
 import { RouterModule } from '@angular/router';
 import { BannerInfoComponent } from './banner-info/banner-info.component';
+import { WarningComponent } from './warning/warning.component';
 
 
 
@@ -19,7 +20,8 @@ import { BannerInfoComponent } from './banner-info/banner-info.component';
     DashboardSummaryComponent,
     NavigationMenuComponent,
     ActionButtonDotsComponent,
-    BannerInfoComponent
+    BannerInfoComponent,
+    WarningComponent
   ],
   exports:[
     DashboardFiltersComponentComponent,
@@ -28,7 +30,8 @@ import { BannerInfoComponent } from './banner-info/banner-info.component';
     DashboardSummaryComponent,
     NavigationMenuComponent,
     ActionButtonDotsComponent,
-    BannerInfoComponent
+    BannerInfoComponent,
+    WarningComponent
   ],
   imports: [
     CommonModule,

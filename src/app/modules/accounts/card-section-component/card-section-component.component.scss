@@ -39,6 +39,7 @@
             .amount{
                 display: flex;
                 align-items: center;
+                margin-right: 10px;
                 span:nth-child(1){
                     margin-right: 4px;
                 }
@@ -55,7 +56,6 @@
                 border-radius: 25px;
                 background-color: $grey-color;
                 div{
-                    // width: 5vw;
                     height: 5px;
                     background-color: $primary-color;
                     border-radius: 25px;
@@ -69,9 +69,10 @@
 
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
 
         >.card{
+            margin-right: 30px;
             padding: 20px 25px !important;
             margin-bottom: 20px;
             width: 20vw;
@@ -101,7 +102,7 @@
     
             .graph{
                 margin: 0 !important;
-                width: 10vw !important;
+                width: 7vw !important;
             }
         }
     }

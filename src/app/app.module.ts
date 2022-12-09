@@ -10,7 +10,7 @@ import { registerLocaleData } from '@angular/common';
 import { SharedModule } from './shared/components/shared.module';
 import { CoreModule } from './core/core.module';
 import { DashboardLayoutModule } from './dashboard-layout/dashboard-layout.module';
-import { BannerInfoComponent } from './shared/components/banner-info/banner-info.component';
+import { HttpClientModule } from '@angular/common/http';
 
 registerLocaleData(localeEs);
 
@@ -22,7 +22,9 @@ registerLocaleData(localeEs);
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    CoreModule
+    CoreModule,
+    DashboardLayoutModule,
+    HttpClientModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'es'}

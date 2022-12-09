@@ -1,48 +1,47 @@
-import { Component, HostListener, Input } from '@angular/core';
+import { Component, HostListener, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { AccountsService } from 'src/app/core/services/accounts/accounts.service';
+import { Account, User } from 'src/app/shared/models/user.interface';
 
 @Component({
   selector: 'app-accounts-section-component',
   templateUrl: './accounts-section-component.component.html',
   styleUrls: ['./accounts-section-component.component.scss']
 })
-export class AccountsSectionComponentComponent {
+export class AccountsSectionComponentComponent implements OnInit {
 
   @Input() isTable: boolean = false;
-  title = "Cuentas";
   isShown = true;
   mobileSize: number = 1023;
   isMobile: boolean = false;
-  actions = [
-    '<span class="icon-Mostrar"></span>&nbsp; Mostrar ocultas',
-    'Filtra resultados &nbsp;<span class="icon-Chevron-abajo"></span>'
-  ];
+  user: User = {
+    id: '',
+    name: '',
+    firstSurname: '',
+    secondSurname: '',
+    summary: [],
+    accounts: [],
+    cards: [],
+    movements: [],
+    notifications: []
+  };
+  
+  textMap:any = {
+    "=0": "No hay mensajes nuevos",
+    "=1": "Mensaje nuevo",
+    "=2": "Mensajes nuevos"
+  }
 
-  cards = [
-    {
-      title: "Pago nóminas",
-      paymentMethod: "*5493",
-      cash: 1987765.09,
-      availableAmount: "3087",
-      isOpenAction: false
-    },
-    {
-      title: "Pago nóminas",
-      paymentMethod: "*5493",
-      cash: 1987765.09,
-      availableAmount: "3087",
-      isOpenAction: false
-    },
-    {
-      title: "Pago nóminas",
-      paymentMethod: "*5493",
-      cash: 1987765.09,
-      availableAmount: "3087",
-      isOpenAction: false
-    }
-  ]
+  constructor( 
+    private accountsService: AccountsService
+  ) {}
 
   ngOnInit(): void {
     this.isMobileCheck();
+
+    this.accountsService.getUser("id")
+    .subscribe( res => {      
+      this.user = res;
+    });
   }
 
   @HostListener('window:resize', ['$event'])
@@ -59,8 +58,8 @@ export class AccountsSectionComponentComponent {
     }
   }
 
-  launchAlert(cardSelected: any){
-    var message = "Navegamos a la cuenta/tarjeta " + cardSelected.title;
+  launchAlert(cardSelected: Account){
+    var message = "Navegamos a la cuenta/tarjeta " + cardSelected.name;
     alert(message);
   }
 }

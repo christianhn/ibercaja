@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DashboardService } from 'src/app/core/services/dashboard/dashboard.service';
+import { Favorite } from '../../models/favorite.interface';
 
 @Component({
   selector: 'app-dashboard-favorites',
@@ -7,4 +9,16 @@ import { Component } from '@angular/core';
 })
 export class DashboardFavoritesComponent {
 
+  favorites: Favorite[] = [];
+
+  constructor( 
+    private dashboardService: DashboardService
+  ) {}
+
+  ngOnInit(): void {
+    this.dashboardService.getFavorites()
+    .subscribe( res => {
+      this.favorites = res;
+    });
+  }
 }
